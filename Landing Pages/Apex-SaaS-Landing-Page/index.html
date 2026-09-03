@@ -1,0 +1,838 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <!-- Basic Meta Tags -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Apex — SaaS & Digital Product Landing Page</title>
+  <meta name="description" content="Apex is a responsive landing page template built with clean HTML5 and Tailwind CSS for SaaS founders and digital product creators." />
+  <meta name="keywords" content="saas landing page, digital product template, tailwind css template, high conversion landing page, html5 template" />
+  <meta name="author" content="Apex Digital" />
+  <meta name="robots" content="index, follow" />
+
+  <!-- CUSTOMIZE: Replace example.com with your production domain before publishing. -->
+  <link rel="canonical" href="https://example.com/" />
+
+  <!-- Open Graph / Facebook Meta Tags -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://example.com/" />
+  <meta property="og:title" content="Apex — SaaS & Digital Product Landing Page" />
+  <meta property="og:description" content="A responsive HTML5 and Tailwind CSS landing page template for digital products." />
+  <!-- CUSTOMIZE: Add an og:image meta tag once you have created a preview image. -->
+
+  <!-- Twitter Card Meta Tags -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:url" content="https://example.com/" />
+  <meta name="twitter:title" content="Apex — SaaS & Digital Product Landing Page" />
+  <meta name="twitter:description" content="A responsive HTML5 and Tailwind CSS landing page template for digital products." />
+  <!-- CUSTOMIZE: Add a twitter:image meta tag once you have created a preview image. -->
+
+  <!-- SVG Favicon -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%232563eb' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><polygon points='12 2 2 7 12 12 22 7 12 2'/><polyline points='2 17 12 22 22 17'/><polyline points='2 12 12 17 22 12'/></svg>" />
+
+  <!-- Google Font: Inter (Preload & font-display: swap to prevent render-blocking) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+  <noscript>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  </noscript>
+
+  <!-- Locally compiled and minified Tailwind CSS. -->
+  <link rel="stylesheet" href="./assets/css/style.min.css" />
+</head>
+<body id="top" class="bg-slate-50 text-slate-900 font-sans antialiased selection:bg-brand-500 selection:text-white">
+
+  <!-- ==========================================
+       1. NAVIGATION BAR
+       ========================================== -->
+  <header class="sticky top-0 z-50 bg-white/85 backdrop-blur-md border-b border-slate-200/80">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-16 sm:h-20">
+        
+        <!-- Logo -->
+        <a href="#top" aria-label="Apex home" class="flex items-center gap-2.5 text-xl font-bold tracking-tight text-slate-900 hover:opacity-90 transition">
+          <div class="w-9 h-9 rounded-xl bg-brand-600 text-white flex items-center justify-center shadow-md shadow-brand-500/20">
+            <i data-lucide="layers" class="w-5 h-5"></i>
+          </div>
+          <span>Apex<span class="text-brand-600">.</span></span>
+        </a>
+
+        <!-- Desktop Navigation Links -->
+        <nav class="hidden md:flex items-center gap-8 text-sm font-medium text-slate-600">
+          <a href="#features" class="hover:text-brand-600 transition">Features</a>
+          <a href="#how-it-works" class="hover:text-brand-600 transition">How It Works</a>
+          <a href="#pricing" class="hover:text-brand-600 transition">Pricing</a>
+          <a href="#testimonials" class="hover:text-brand-600 transition">Testimonials</a>
+          <a href="#faq" class="hover:text-brand-600 transition">FAQ</a>
+        </nav>
+
+        <!-- CTA & Mobile Menu Toggle -->
+        <div class="flex items-center gap-3">
+          <!-- CUSTOMIZE: Replace href with your actual payment / signup link -->
+          <a href="#pricing" class="hidden sm:inline-flex items-center justify-center px-4 py-2.5 text-sm font-semibold text-white bg-slate-900 hover:bg-slate-800 rounded-lg shadow-sm hover:shadow transition">
+            Get Started
+          </a>
+
+          <!-- Accessible Mobile Menu Button with dynamic aria-expanded & icon toggle -->
+          <button type="button" id="mobile-menu-btn" class="md:hidden p-2 rounded-lg text-slate-600 hover:bg-slate-100 transition focus:outline-none focus:ring-2 focus:ring-brand-500" aria-expanded="false" aria-controls="mobile-menu" aria-label="Toggle mobile menu">
+            <i data-lucide="menu" id="menu-icon-open" class="w-6 h-6"></i>
+            <i data-lucide="x" id="menu-icon-close" class="w-6 h-6 hidden"></i>
+          </button>
+        </div>
+      </div>
+
+      <!-- Mobile Dropdown Nav Menu -->
+      <div id="mobile-menu" class="hidden md:hidden pb-4 border-t border-slate-100 pt-3 flex flex-col gap-3 text-sm font-medium text-slate-700">
+        <a href="#features" class="px-2 py-1.5 rounded hover:bg-slate-100 transition mobile-nav-link">Features</a>
+        <a href="#how-it-works" class="px-2 py-1.5 rounded hover:bg-slate-100 transition mobile-nav-link">How It Works</a>
+        <a href="#pricing" class="px-2 py-1.5 rounded hover:bg-slate-100 transition mobile-nav-link">Pricing</a>
+        <a href="#testimonials" class="px-2 py-1.5 rounded hover:bg-slate-100 transition mobile-nav-link">Testimonials</a>
+        <a href="#faq" class="px-2 py-1.5 rounded hover:bg-slate-100 transition mobile-nav-link">FAQ</a>
+        <!-- CUSTOMIZE: Mobile CTA link -->
+        <a href="#pricing" class="mt-2 text-center py-2.5 font-semibold text-white bg-brand-600 hover:bg-brand-700 rounded-lg shadow-sm mobile-nav-link">
+          Get Started
+        </a>
+      </div>
+    </div>
+  </header>
+
+
+  <!-- ==========================================
+       2. HERO SECTION
+       ========================================== -->
+  <section class="relative pt-12 pb-20 md:pt-20 md:pb-28 overflow-hidden">
+    <!-- Subtle Background Radial Glow -->
+    <div class="absolute inset-0 pointer-events-none -z-10 flex justify-center">
+      <div class="w-[800px] h-[400px] bg-gradient-to-tr from-brand-100/70 to-blue-200/40 blur-3xl opacity-70 rounded-full transform -translate-y-1/2"></div>
+    </div>
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      
+      <!-- Trust Badge / Announcement (CUSTOMIZE: Change text to match your product status) -->
+      <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-brand-50 border border-brand-200/60 text-brand-700 text-xs sm:text-sm font-medium mb-8">
+        <span class="flex h-2 w-2 rounded-full bg-brand-600 animate-pulse"></span>
+        <!-- PLACEHOLDER ANNOUNCEMENT: Update with your release version or news -->
+        <span>Example announcement — replace with your own update</span>
+        <span class="text-slate-300">•</span>
+        <a href="#pricing" class="flex items-center gap-1 font-semibold hover:underline">
+          Explore updates <i data-lucide="chevron-right" class="w-3.5 h-3.5"></i>
+        </a>
+      </div>
+
+      <!-- Main Headline -->
+      <h1 class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold tracking-tight text-slate-900 max-w-4xl mx-auto leading-[1.15]">
+        Present your digital product with <span class="bg-gradient-to-r from-brand-600 to-indigo-600 bg-clip-text text-transparent">clarity</span>
+      </h1>
+
+      <!-- Value Proposition / Subheadline -->
+      <p class="mt-6 text-lg sm:text-xl text-slate-600 max-w-2xl mx-auto leading-relaxed">
+        The complete, conversion-optimized template designed to help founders and creators launch faster, look established, and turn traffic into recurring revenue.
+      </p>
+
+      <!-- Primary & Secondary CTA Buttons -->
+      <div class="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4">
+        <!-- CUSTOMIZE: Primary CTA link -->
+        <a href="#pricing" class="w-full sm:w-auto px-8 py-4 text-base font-semibold text-white bg-brand-600 hover:bg-brand-700 rounded-xl shadow-lg shadow-brand-500/25 transition-all duration-200 hover:-translate-y-0.5 flex items-center justify-center gap-2">
+          <span>Get Instant Access</span>
+          <i data-lucide="arrow-right" class="w-4 h-4"></i>
+        </a>
+        <a href="#how-it-works" class="w-full sm:w-auto px-8 py-4 text-base font-semibold text-slate-700 bg-white hover:bg-slate-100 border border-slate-200 rounded-xl transition duration-200 flex items-center justify-center gap-2">
+          <i data-lucide="play-circle" class="w-5 h-5 text-slate-500"></i>
+          <span>Live Demo</span>
+        </a>
+      </div>
+
+      <!-- Social Proof / Rating Stack (Clean SVG Avatars — 100% Ethical & Privacy-Safe) -->
+      <div class="mt-12 pt-8 border-t border-slate-200/60 max-w-md mx-auto flex items-center justify-center gap-4">
+        <!-- Illustrated Avatar Stack -->
+        <div class="flex -space-x-2.5 overflow-hidden">
+          <div class="inline-flex items-center justify-center h-9 w-9 rounded-full ring-2 ring-white bg-gradient-to-br from-blue-500 to-indigo-600 text-white text-xs font-bold shadow-sm">AK</div>
+          <div class="inline-flex items-center justify-center h-9 w-9 rounded-full ring-2 ring-white bg-gradient-to-br from-emerald-400 to-teal-600 text-white text-xs font-bold shadow-sm">SL</div>
+          <div class="inline-flex items-center justify-center h-9 w-9 rounded-full ring-2 ring-white bg-gradient-to-br from-amber-400 to-orange-500 text-white text-xs font-bold shadow-sm">MR</div>
+          <div class="inline-flex items-center justify-center h-9 w-9 rounded-full ring-2 ring-white bg-gradient-to-br from-purple-500 to-pink-600 text-white text-xs font-bold shadow-sm">DT</div>
+        </div>
+        <!-- Rating & Copy (CUSTOMIZE: Replace placeholder count with verified statistics) -->
+        <div class="text-left text-xs">
+          <div class="flex items-center text-amber-400">
+            <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+            <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+            <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+            <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+            <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+          </div>
+          <p class="font-semibold text-slate-700 mt-0.5">Example rating — replace with verified customer feedback</p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ==========================================
+       3. LOGOS / TRUST SECTION
+       ========================================== -->
+  <section class="py-12 bg-white border-y border-slate-200/70">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <p class="text-xs sm:text-sm font-semibold uppercase tracking-wider text-slate-400 mb-8">
+        Example brand logos — replace with brands you are authorized to display
+      </p>
+      
+      <!-- Responsive Logo Grid -->
+      <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-8 items-center justify-center opacity-60 grayscale hover:grayscale-0 transition-all duration-300">
+        
+        <div class="flex items-center justify-center gap-2 text-slate-700 font-bold text-lg">
+          <i data-lucide="cpu" class="w-6 h-6 text-brand-600"></i>
+          <span>Example Brand 01</span>
+        </div>
+
+        <div class="flex items-center justify-center gap-2 text-slate-700 font-bold text-lg">
+          <i data-lucide="zap" class="w-6 h-6 text-brand-600"></i>
+          <span>Example Brand 02</span>
+        </div>
+
+        <div class="flex items-center justify-center gap-2 text-slate-700 font-bold text-lg">
+          <i data-lucide="shield-check" class="w-6 h-6 text-brand-600"></i>
+          <span>Example Brand 03</span>
+        </div>
+
+        <div class="flex items-center justify-center gap-2 text-slate-700 font-bold text-lg">
+          <i data-lucide="globe" class="w-6 h-6 text-brand-600"></i>
+          <span>Example Brand 04</span>
+        </div>
+
+        <div class="flex items-center justify-center gap-2 text-slate-700 font-bold text-lg">
+          <i data-lucide="feather" class="w-6 h-6 text-brand-600"></i>
+          <span>Example Brand 05</span>
+        </div>
+
+        <div class="flex items-center justify-center gap-2 text-slate-700 font-bold text-lg">
+          <i data-lucide="box" class="w-6 h-6 text-brand-600"></i>
+          <span>Example Brand 06</span>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ==========================================
+       4. FEATURES & BENEFITS SECTION
+       ========================================== -->
+  <section id="features" class="py-20 md:py-32 bg-slate-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <!-- Section Header -->
+      <div class="text-center max-w-3xl mx-auto mb-16">
+        <h2 class="text-xs sm:text-sm font-semibold uppercase tracking-wider text-brand-600 mb-2">Designed for Conversion</h2>
+        <p class="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight">
+          Everything you need to turn visitors into buyers
+        </p>
+        <p class="mt-4 text-base sm:text-lg text-slate-600">
+          Focus on your product while this flexible landing-page structure helps you present its value clearly.
+        </p>
+      </div>
+
+      <!-- Features Grid (3 Core Benefit Cards) -->
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        
+        <!-- Feature 1 -->
+        <div class="bg-white p-8 rounded-2xl border border-slate-200/80 shadow-sm hover:shadow-md transition-all duration-200 hover:-translate-y-1">
+          <div class="w-12 h-12 rounded-xl bg-brand-50 text-brand-600 flex items-center justify-center mb-6">
+            <i data-lucide="gauge" class="w-6 h-6"></i>
+          </div>
+          <h3 class="text-xl font-bold text-slate-900 mb-3">Lightning Fast & SEO Ready</h3>
+          <p class="text-slate-600 text-sm leading-relaxed mb-4">
+            Built with semantic HTML, local assets, and a structure designed for fast performance and SEO-friendly customization.
+          </p>
+          <div class="text-xs font-semibold text-brand-600 flex items-center gap-1">
+            Benefit: A clean foundation for your content and technical SEO <i data-lucide="check" class="w-3.5 h-3.5"></i>
+          </div>
+        </div>
+
+        <!-- Feature 2 -->
+        <div class="bg-white p-8 rounded-2xl border border-slate-200/80 shadow-sm hover:shadow-md transition-all duration-200 hover:-translate-y-1">
+          <div class="w-12 h-12 rounded-xl bg-brand-50 text-brand-600 flex items-center justify-center mb-6">
+            <i data-lucide="target" class="w-6 h-6"></i>
+          </div>
+          <h3 class="text-xl font-bold text-slate-900 mb-3">Conversion-Optimized Flow</h3>
+          <p class="text-slate-600 text-sm leading-relaxed mb-4">
+            A conversion-focused layout with clear CTA placement and space for your own validated social proof.
+          </p>
+          <div class="text-xs font-semibold text-brand-600 flex items-center gap-1">
+            Benefit: A clear, adaptable path from product message to action <i data-lucide="check" class="w-3.5 h-3.5"></i>
+          </div>
+        </div>
+
+        <!-- Feature 3 -->
+        <div class="bg-white p-8 rounded-2xl border border-slate-200/80 shadow-sm hover:shadow-md transition-all duration-200 hover:-translate-y-1">
+          <div class="w-12 h-12 rounded-xl bg-brand-50 text-brand-600 flex items-center justify-center mb-6">
+            <i data-lucide="code-2" class="w-6 h-6"></i>
+          </div>
+          <h3 class="text-xl font-bold text-slate-900 mb-3">Effortless Customization</h3>
+          <p class="text-slate-600 text-sm leading-relaxed mb-4">
+            Clean, modular Tailwind classes and organized HTML comments make updating brand colors, typography, and copy a breeze.
+          </p>
+          <div class="text-xs font-semibold text-brand-600 flex items-center gap-1">
+            Benefit: Make straightforward edits in your preferred code editor <i data-lucide="check" class="w-3.5 h-3.5"></i>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ==========================================
+       5. CALL TO ACTION / HOW IT WORKS SECTION
+       ========================================== -->
+  <section id="how-it-works" class="py-20 md:py-28 bg-slate-900 text-white relative overflow-hidden">
+    <!-- Decorative Glow -->
+    <div class="absolute right-0 top-1/2 -translate-y-1/2 w-96 h-96 bg-brand-600/20 blur-3xl pointer-events-none rounded-full"></div>
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      
+      <!-- Section Header -->
+      <div class="text-center max-w-2xl mx-auto mb-16">
+        <h2 class="text-xs sm:text-sm font-semibold uppercase tracking-wider text-brand-400 mb-2">Simple Workflow</h2>
+        <p class="text-3xl sm:text-4xl font-extrabold tracking-tight">
+          How it works in 3 easy steps
+        </p>
+        <p class="mt-3 text-slate-400 text-base">
+          From download to a customized landing page in three practical steps.
+        </p>
+      </div>
+
+      <!-- Steps Grid -->
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8 relative">
+        
+        <!-- Step 1 -->
+        <div class="bg-slate-800/50 backdrop-blur-sm border border-slate-700/60 p-8 rounded-2xl relative">
+          <div class="text-4xl font-extrabold text-brand-500/30 mb-4">01</div>
+          <h3 class="text-xl font-bold mb-2">Download Code</h3>
+          <p class="text-slate-400 text-sm leading-relaxed">
+            Get instant access to the clean, well-commented HTML5 & Tailwind file structure ready to open in any editor.
+          </p>
+        </div>
+
+        <!-- Step 2 -->
+        <div class="bg-slate-800/50 backdrop-blur-sm border border-slate-700/60 p-8 rounded-2xl relative">
+          <div class="text-4xl font-extrabold text-brand-500/30 mb-4">02</div>
+          <h3 class="text-xl font-bold mb-2">Insert Your Content</h3>
+          <p class="text-slate-400 text-sm leading-relaxed">
+            Swap in your copy, brand colors, product screenshots, and your direct payment or registration links.
+          </p>
+        </div>
+
+        <!-- Step 3 -->
+        <div class="bg-slate-800/50 backdrop-blur-sm border border-slate-700/60 p-8 rounded-2xl relative">
+          <div class="text-4xl font-extrabold text-brand-500/30 mb-4">03</div>
+          <h3 class="text-xl font-bold mb-2">Deploy Your Site</h3>
+          <p class="text-slate-400 text-sm leading-relaxed">
+            Publish the static files with your preferred host, then connect your own domain and analytics tools.
+          </p>
+        </div>
+
+      </div>
+
+      <!-- Section CTA Button -->
+      <div class="mt-14 text-center">
+        <!-- CUSTOMIZE: Step CTA Link -->
+        <a href="#pricing" class="inline-flex items-center justify-center px-8 py-4 text-base font-semibold text-slate-900 bg-white hover:bg-slate-100 rounded-xl transition duration-200 gap-2 shadow-lg">
+          <span>Choose Your Plan</span>
+          <i data-lucide="arrow-right" class="w-4 h-4"></i>
+        </a>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ==========================================
+       6. PRICING / OFFER SECTION
+       ========================================== -->
+  <section id="pricing" class="py-20 md:py-32 bg-slate-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <!-- Section Header -->
+      <div class="text-center max-w-3xl mx-auto mb-16">
+        <h2 class="text-xs sm:text-sm font-semibold uppercase tracking-wider text-brand-600 mb-2">Transparent Pricing</h2>
+        <p class="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight">
+          Example pricing — customize before publishing.
+        </p>
+        <p class="mt-4 text-base sm:text-lg text-slate-600">
+          <!-- CUSTOMIZE: Replace plan names, prices, features, policies, and checkout URLs with your actual offer. -->
+          These cards are sample content only. This package does not include Figma files, extra page variants, consultations, or support services.
+        </p>
+      </div>
+
+      <!-- Pricing Cards (3 Tiers) -->
+      <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 items-stretch max-w-6xl mx-auto">
+        
+        <!-- Plan 1: Starter -->
+        <div class="bg-white rounded-2xl border border-slate-200 p-8 shadow-sm flex flex-col justify-between">
+          <div>
+            <div class="flex items-center justify-between mb-4">
+              <h3 class="text-lg font-bold text-slate-900">Starter</h3>
+              <span class="text-xs font-semibold px-2.5 py-1 bg-slate-100 text-slate-700 rounded-full">Single Project</span>
+            </div>
+            <p class="text-slate-500 text-sm mb-6">Ideal for indie hackers testing an initial product concept.</p>
+            <div class="flex items-baseline gap-1 mb-6">
+              <span class="text-4xl font-extrabold text-slate-900">$29</span>
+              <span class="text-slate-500 text-sm font-medium">/ one-time</span>
+            </div>
+            
+            <ul class="space-y-3.5 text-sm text-slate-600 border-t border-slate-100 pt-6">
+              <li class="flex items-center gap-3">
+                <i data-lucide="check" class="w-4 h-4 text-brand-600 flex-shrink-0"></i>
+                <span>Complete HTML & Compiled CSS</span>
+              </li>
+              <li class="flex items-center gap-3">
+                <i data-lucide="check" class="w-4 h-4 text-brand-600 flex-shrink-0"></i>
+                <span>Single-page HTML layout</span>
+              </li>
+              <li class="flex items-center gap-3">
+                <i data-lucide="check" class="w-4 h-4 text-brand-600 flex-shrink-0"></i>
+                <span>Local compiled CSS and icon library</span>
+              </li>
+              <li class="flex items-center gap-3">
+                <i data-lucide="check" class="w-4 h-4 text-brand-600 flex-shrink-0"></i>
+                <span>README customization guide</span>
+              </li>
+            </ul>
+          </div>
+
+          <!-- CUSTOMIZE: Insert your direct checkout URL for Starter tier -->
+          <div class="mt-8">
+            <!-- CUSTOMIZE: Replace # with your Starter checkout URL. -->
+            <a href="#" class="w-full py-3.5 px-4 block text-center font-semibold text-slate-700 bg-slate-100 hover:bg-slate-200 rounded-xl transition duration-200 text-sm">
+              Get Starter Plan
+            </a>
+          </div>
+        </div>
+
+        <!-- Plan 2: Pro (Featured / Recommended) -->
+        <div class="bg-white rounded-2xl border-2 border-brand-600 p-8 shadow-xl relative flex flex-col justify-between transform lg:-translate-y-2">
+          <!-- Popular Badge -->
+          <div class="absolute -top-3.5 left-1/2 -translate-x-1/2 bg-brand-600 text-white text-xs font-bold uppercase tracking-wider px-3.5 py-1 rounded-full shadow">
+            Most Popular
+          </div>
+
+          <div>
+            <div class="flex items-center justify-between mb-4">
+              <h3 class="text-lg font-bold text-slate-900">Professional</h3>
+              <span class="text-xs font-semibold px-2.5 py-1 bg-brand-50 text-brand-700 rounded-full">Example Plan</span>
+            </div>
+            <p class="text-slate-500 text-sm mb-6">For serial entrepreneurs, agencies, and full-time creators.</p>
+            <div class="flex items-baseline gap-1 mb-6">
+              <span class="text-4xl font-extrabold text-slate-900">$59</span>
+              <span class="text-slate-500 text-sm font-medium">/ one-time</span>
+            </div>
+            
+            <ul class="space-y-3.5 text-sm text-slate-600 border-t border-slate-100 pt-6">
+              <li class="flex items-center gap-3">
+                <i data-lucide="check" class="w-4 h-4 text-brand-600 flex-shrink-0"></i>
+                <span class="font-medium text-slate-900">Complete landing page template</span>
+              </li>
+              <li class="flex items-center gap-3">
+                <i data-lucide="check" class="w-4 h-4 text-brand-600 flex-shrink-0"></i>
+                <span>Source input CSS</span>
+              </li>
+              <li class="flex items-center gap-3">
+                <i data-lucide="check" class="w-4 h-4 text-brand-600 flex-shrink-0"></i>
+                <span>Complete HTML & Compiled CSS</span>
+              </li>
+              <li class="flex items-center gap-3">
+                <i data-lucide="check" class="w-4 h-4 text-brand-600 flex-shrink-0"></i>
+                <span>Tailwind configuration file</span>
+              </li>
+              <li class="flex items-center gap-3">
+                <i data-lucide="check" class="w-4 h-4 text-brand-600 flex-shrink-0"></i>
+                <span>Third-party license notices</span>
+              </li>
+            </ul>
+          </div>
+
+          <!-- CUSTOMIZE: Insert your direct checkout URL for Pro tier -->
+          <div class="mt-8">
+            <!-- CUSTOMIZE: Replace # with your Professional checkout URL. -->
+            <a href="#" class="w-full py-3.5 px-4 block text-center font-semibold text-white bg-brand-600 hover:bg-brand-700 rounded-xl shadow-md shadow-brand-500/30 transition duration-200 text-sm">
+              Get Pro Plan Now
+            </a>
+          </div>
+        </div>
+
+        <!-- Plan 3: Agency Bundle -->
+        <div class="bg-white rounded-2xl border border-slate-200 p-8 shadow-sm flex flex-col justify-between">
+          <div>
+            <div class="flex items-center justify-between mb-4">
+              <h3 class="text-lg font-bold text-slate-900">Agency Bundle</h3>
+              <span class="text-xs font-semibold px-2.5 py-1 bg-slate-100 text-slate-700 rounded-full">Complete Kit</span>
+            </div>
+            <p class="text-slate-500 text-sm mb-6">Designed for dev studios & designers delivering client sites.</p>
+            <div class="flex items-baseline gap-1 mb-6">
+              <span class="text-4xl font-extrabold text-slate-900">$129</span>
+              <span class="text-slate-500 text-sm font-medium">/ one-time</span>
+            </div>
+            
+            <ul class="space-y-3.5 text-sm text-slate-600 border-t border-slate-100 pt-6">
+              <li class="flex items-center gap-3">
+                <i data-lucide="check" class="w-4 h-4 text-brand-600 flex-shrink-0"></i>
+                <span>Complete landing page template</span>
+              </li>
+              <li class="flex items-center gap-3">
+                <i data-lucide="check" class="w-4 h-4 text-brand-600 flex-shrink-0"></i>
+                <span>Source HTML and compiled CSS</span>
+              </li>
+              <li class="flex items-center gap-3">
+                <i data-lucide="check" class="w-4 h-4 text-brand-600 flex-shrink-0"></i>
+                <span>Local Lucide icon library</span>
+              </li>
+              <li class="flex items-center gap-3">
+                <i data-lucide="check" class="w-4 h-4 text-brand-600 flex-shrink-0"></i>
+                <span>Tailwind configuration and source CSS</span>
+              </li>
+              <li class="flex items-center gap-3">
+                <i data-lucide="check" class="w-4 h-4 text-brand-600 flex-shrink-0"></i>
+                <span>README customization guide</span>
+              </li>
+            </ul>
+          </div>
+
+          <!-- CUSTOMIZE: Insert your direct checkout URL for Agency tier -->
+          <div class="mt-8">
+            <!-- CUSTOMIZE: Replace # with your Agency checkout URL. -->
+            <a href="#" class="w-full py-3.5 px-4 block text-center font-semibold text-slate-700 bg-slate-100 hover:bg-slate-200 rounded-xl transition duration-200 text-sm">
+              Get Agency Bundle
+            </a>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Money Back Guarantee -->
+      <div class="mt-12 text-center flex items-center justify-center gap-2 text-sm text-slate-500">
+        <i data-lucide="shield" class="w-4 h-4 text-emerald-600"></i>
+        <!-- CUSTOMIZE: Replace with your own refund policy or remove this line. -->
+        <span>Example refund policy — replace with your own terms.</span>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ==========================================
+       7. TESTIMONIALS SECTION
+       (NOTE: Clean SVG illustrations used as ethical placeholders. Replace with your actual customer reviews)
+       ========================================== -->
+  <section id="testimonials" class="py-20 md:py-32 bg-white border-t border-slate-200/80">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <!-- Section Header -->
+      <div class="text-center max-w-2xl mx-auto mb-16">
+        <h2 class="text-xs sm:text-sm font-semibold uppercase tracking-wider text-brand-600 mb-2">Example Testimonials</h2>
+        <p class="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight">
+          Replace with genuine customer feedback
+        </p>
+        <p class="mt-3 text-slate-600 text-base">
+          These cards are placeholders. Use only reviews and names you are authorized to publish.
+        </p>
+      </div>
+
+      <!-- Testimonials Grid (3 Ethical Placeholder Cards) -->
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        
+        <!-- Testimonial 1 -->
+        <div class="bg-slate-50 p-8 rounded-2xl border border-slate-200/80 flex flex-col justify-between">
+          <div>
+            <div class="flex text-amber-400 mb-4">
+              <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+              <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+              <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+              <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+              <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+            </div>
+            <p class="text-slate-700 text-sm sm:text-base leading-relaxed italic">
+              “Replace this with a verified customer review.”
+            </p>
+          </div>
+          
+          <div class="flex items-center gap-3 mt-6 pt-6 border-t border-slate-200/60">
+            <div class="w-11 h-11 rounded-full bg-gradient-to-br from-blue-500 to-indigo-600 flex items-center justify-center text-white font-bold text-sm shadow-sm">
+              SJ
+            </div>
+            <div>
+              <h4 class="text-sm font-bold text-slate-900">Customer Name</h4>
+              <p class="text-xs text-slate-500">Role / Company</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Testimonial 2 -->
+        <div class="bg-slate-50 p-8 rounded-2xl border border-slate-200/80 flex flex-col justify-between">
+          <div>
+            <div class="flex text-amber-400 mb-4">
+              <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+              <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+              <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+              <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+              <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+            </div>
+            <p class="text-slate-700 text-sm sm:text-base leading-relaxed italic">
+              “Replace this with a verified customer review.”
+            </p>
+          </div>
+          
+          <div class="flex items-center gap-3 mt-6 pt-6 border-t border-slate-200/60">
+            <div class="w-11 h-11 rounded-full bg-gradient-to-br from-emerald-400 to-teal-600 flex items-center justify-center text-white font-bold text-sm shadow-sm">
+              AR
+            </div>
+            <div>
+              <h4 class="text-sm font-bold text-slate-900">Customer Name</h4>
+              <p class="text-xs text-slate-500">Role / Company</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Testimonial 3 -->
+        <div class="bg-slate-50 p-8 rounded-2xl border border-slate-200/80 flex flex-col justify-between">
+          <div>
+            <div class="flex text-amber-400 mb-4">
+              <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+              <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+              <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+              <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+              <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+            </div>
+            <p class="text-slate-700 text-sm sm:text-base leading-relaxed italic">
+              “Replace this with a verified customer review.”
+            </p>
+          </div>
+          
+          <div class="flex items-center gap-3 mt-6 pt-6 border-t border-slate-200/60">
+            <div class="w-11 h-11 rounded-full bg-gradient-to-br from-purple-500 to-pink-600 flex items-center justify-center text-white font-bold text-sm shadow-sm">
+              ER
+            </div>
+            <div>
+              <h4 class="text-sm font-bold text-slate-900">Customer Name</h4>
+              <p class="text-xs text-slate-500">Role / Company</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ==========================================
+       8. FAQ SECTION (Accordion with <details>)
+       ========================================== -->
+  <section id="faq" class="py-20 md:py-32 bg-slate-50">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <!-- Section Header -->
+      <div class="text-center mb-16">
+        <h2 class="text-xs sm:text-sm font-semibold uppercase tracking-wider text-brand-600 mb-2">Got Questions?</h2>
+        <p class="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight">
+          Frequently Asked Questions
+        </p>
+        <p class="mt-3 text-slate-600 text-base">
+          Everything you need to know about the template and commercial usage.
+        </p>
+      </div>
+
+      <!-- Accordion FAQ Items using native HTML5 <details> & <summary> -->
+      <div class="space-y-4">
+        
+        <!-- FAQ 1 -->
+        <details class="group bg-white rounded-xl border border-slate-200/80 p-6 shadow-sm transition-all duration-200">
+          <summary class="flex justify-between items-center font-semibold text-slate-900 cursor-pointer list-none text-base sm:text-lg">
+            <span>What do I receive upon purchasing?</span>
+            <span class="faq-icon text-slate-400 group-hover:text-brand-600 transition-transform duration-200">
+              <i data-lucide="chevron-down" class="w-5 h-5"></i>
+            </span>
+          </summary>
+          <div class="mt-4 text-slate-600 text-sm sm:text-base leading-relaxed border-t border-slate-100 pt-4">
+            You will receive a downloadable ZIP containing the source HTML, compiled Tailwind CSS, source CSS, Tailwind configuration, local Lucide icons, and documentation.
+          </div>
+        </details>
+
+        <!-- FAQ 2 -->
+        <details class="group bg-white rounded-xl border border-slate-200/80 p-6 shadow-sm transition-all duration-200">
+          <summary class="flex justify-between items-center font-semibold text-slate-900 cursor-pointer list-none text-base sm:text-lg">
+            <span>Do I need advanced coding knowledge to edit this?</span>
+            <span class="faq-icon text-slate-400 group-hover:text-brand-600 transition-transform duration-200">
+              <i data-lucide="chevron-down" class="w-5 h-5"></i>
+            </span>
+          </summary>
+          <div class="mt-4 text-slate-600 text-sm sm:text-base leading-relaxed border-t border-slate-100 pt-4">
+            Not at all. If you know basic HTML, you can change text, links, and colors within minutes. All sections are well-commented and clearly separated.
+          </div>
+        </details>
+
+        <!-- FAQ 3 -->
+        <details class="group bg-white rounded-xl border border-slate-200/80 p-6 shadow-sm transition-all duration-200">
+          <summary class="flex justify-between items-center font-semibold text-slate-900 cursor-pointer list-none text-base sm:text-lg">
+            <span>Can I use this for client projects or commercial apps?</span>
+            <span class="faq-icon text-slate-400 group-hover:text-brand-600 transition-transform duration-200">
+              <i data-lucide="chevron-down" class="w-5 h-5"></i>
+            </span>
+          </summary>
+          <div class="mt-4 text-slate-600 text-sm sm:text-base leading-relaxed border-t border-slate-100 pt-4">
+            Usage rights depend on the license offered by the seller. Replace this answer with the terms that apply to your product before publishing.
+          </div>
+        </details>
+
+        <!-- FAQ 4 -->
+        <details class="group bg-white rounded-xl border border-slate-200/80 p-6 shadow-sm transition-all duration-200">
+          <summary class="flex justify-between items-center font-semibold text-slate-900 cursor-pointer list-none text-base sm:text-lg">
+            <span>Can I integrate this with React, Next.js, or Vue?</span>
+            <span class="faq-icon text-slate-400 group-hover:text-brand-600 transition-transform duration-200">
+              <i data-lucide="chevron-down" class="w-5 h-5"></i>
+            </span>
+          </summary>
+          <div class="mt-4 text-slate-600 text-sm sm:text-base leading-relaxed border-t border-slate-100 pt-4">
+            Absolutely. Because this uses standard Tailwind utility classes and semantic HTML tags, you can easily copy and paste the markup directly into JSX/TSX or any modern UI framework.
+          </div>
+        </details>
+
+        <!-- FAQ 5 -->
+        <details class="group bg-white rounded-xl border border-slate-200/80 p-6 shadow-sm transition-all duration-200">
+          <summary class="flex justify-between items-center font-semibold text-slate-900 cursor-pointer list-none text-base sm:text-lg">
+            <span>What is your refund policy?</span>
+            <span class="faq-icon text-slate-400 group-hover:text-brand-600 transition-transform duration-200">
+              <i data-lucide="chevron-down" class="w-5 h-5"></i>
+            </span>
+          </summary>
+          <div class="mt-4 text-slate-600 text-sm sm:text-base leading-relaxed border-t border-slate-100 pt-4">
+            This is placeholder copy. Replace it with your actual refund policy and contact method before publishing.
+          </div>
+        </details>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ==========================================
+       9. FINAL CALL TO ACTION BANNER
+       ========================================== -->
+  <section class="py-16 bg-white border-t border-slate-200/80">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="bg-gradient-to-r from-brand-600 to-indigo-700 rounded-3xl p-8 sm:p-14 text-center text-white shadow-xl relative overflow-hidden">
+        
+        <h2 class="text-3xl sm:text-4xl font-extrabold tracking-tight mb-4">
+          Ready to boost your conversion rates?
+        </h2>
+        <p class="text-brand-100 max-w-xl mx-auto text-base sm:text-lg mb-8">
+          Customize Apex with your product details, links, and verified social proof.
+        </p>
+        
+        <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
+          <a href="#pricing" class="w-full sm:w-auto px-8 py-4 text-base font-semibold text-brand-700 bg-white hover:bg-brand-50 rounded-xl shadow-lg transition duration-200">
+            Get Instant Access Now
+          </a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ==========================================
+       10. FOOTER
+       ========================================== -->
+  <footer class="bg-slate-900 text-slate-400 py-12 border-t border-slate-800">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="flex flex-col md:flex-row items-center justify-between gap-6">
+        
+        <!-- Brand / Copyright -->
+        <div class="flex items-center gap-2.5 text-white font-bold text-lg">
+          <div class="w-8 h-8 rounded-lg bg-brand-600 flex items-center justify-center">
+            <i data-lucide="layers" class="w-4 h-4 text-white"></i>
+          </div>
+          <span>Apex<span class="text-brand-500">.</span></span>
+        </div>
+
+        <!-- Navigation Links -->
+        <div class="flex flex-wrap justify-center gap-6 text-sm text-slate-400">
+          <a href="#features" class="hover:text-white transition">Features</a>
+          <a href="#pricing" class="hover:text-white transition">Pricing</a>
+          <a href="#faq" class="hover:text-white transition">FAQ</a>
+          <!-- CUSTOMIZE: Replace # with the URL of your Privacy Policy. -->
+          <a href="#" class="hover:text-white transition">Privacy Policy</a>
+          <!-- CUSTOMIZE: Replace # with the URL of your Terms of Service. -->
+          <a href="#" class="hover:text-white transition">Terms of Service</a>
+        </div>
+
+        <!-- Copyright Text -->
+        <p class="text-xs text-slate-500 text-center md:text-right">
+          &copy; <span id="current-year"></span> Apex Digital Inc. All rights reserved.
+        </p>
+
+      </div>
+    </div>
+  </footer>
+
+
+  <!-- ==========================================
+       11. JAVASCRIPT (Pinned & Localized)
+       ========================================== -->
+  <!-- Pinned Lucide Icons version (v0.469.0) — prevents breaking changes -->
+  <script src="./assets/js/lucide.min.js"></script>
+
+  <script>
+    // 1. Initialize Lucide Icons
+    if (typeof lucide !== 'undefined') {
+      lucide.createIcons();
+    }
+
+    // 2. Set dynamic current year in footer
+    const yearElem = document.getElementById('current-year');
+    if (yearElem) {
+      yearElem.textContent = new Date().getFullYear();
+    }
+
+    // 3. Accessible Mobile Navigation with Icon Toggle (☰ <-> ✕)
+    const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+    const menuIconOpen = document.getElementById('menu-icon-open');
+    const menuIconClose = document.getElementById('menu-icon-close');
+    const mobileNavLinks = document.querySelectorAll('.mobile-nav-link');
+
+    if (mobileMenuBtn && mobileMenu) {
+      const toggleMenu = () => {
+        const isHidden = mobileMenu.classList.toggle('hidden');
+        const isExpanded = !isHidden;
+        
+        mobileMenuBtn.setAttribute('aria-expanded', isExpanded.toString());
+        
+        if (menuIconOpen && menuIconClose) {
+          if (isExpanded) {
+            menuIconOpen.classList.add('hidden');
+            menuIconClose.classList.remove('hidden');
+          } else {
+            menuIconOpen.classList.remove('hidden');
+            menuIconClose.classList.add('hidden');
+          }
+        }
+      };
+
+      mobileMenuBtn.addEventListener('click', toggleMenu);
+
+      // Close mobile menu when clicking any nav link
+      mobileNavLinks.forEach(link => {
+        link.addEventListener('click', () => {
+          if (!mobileMenu.classList.contains('hidden')) {
+            toggleMenu();
+          }
+        });
+      });
+    }
+  </script>
+</body>
+</html>

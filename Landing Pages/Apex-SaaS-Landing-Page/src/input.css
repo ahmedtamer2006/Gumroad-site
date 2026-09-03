@@ -1,0 +1,11 @@
+﻿@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Smooth details/summary accordion arrow animation */
+details summary::-webkit-details-marker {
+  display: none;
+}
+details[open] summary .faq-icon {
+  transform: rotate(180deg);
+}
