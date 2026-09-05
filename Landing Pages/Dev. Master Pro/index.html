@@ -1,0 +1,1501 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- CLIENT: Change this description — it appears in Google search results -->
+  <meta name="description" content="Master Full-Stack Web Development. Join 12,000+ students in the most comprehensive, project-based bootcamp online. Lifetime access. Money-back guarantee." />
+  <meta name="theme-color" content="#6C47FF" />
+
+  <!-- ============================================================
+    PAGE TITLE
+    CLIENT: Change to your course/brand name
+  ============================================================ -->
+  <title>DevMaster Pro — Full-Stack Web Development Bootcamp</title>
+
+  <!-- ============================================================
+    FAVICON (SVG geometric developer crest)
+    CLIENT: Replace with <link rel="icon" href="assets/images/favicon.ico" />
+  ============================================================ -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='8' fill='%236C47FF'/><path d='M8 13.5L16 9L24 13.5L16 18L8 13.5Z' stroke='white' stroke-width='2'/><path d='M12 16v4c0 1.5 1.8 3 4 3s4-1.5 4-3v-4' stroke='white' stroke-width='2' fill='none'/></svg>" />
+
+  <!-- ============================================================
+    AOS — Animate On Scroll (scroll-triggered fade/slide animations)
+    Loaded from CDN — no installation needed. ~7KB gzip.
+    CLIENT: Remove these two lines to disable ALL scroll animations.
+  ============================================================ -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" />
+
+  <!-- ============================================================
+    GOOGLE FONTS
+    CLIENT: To change fonts:
+      1. Visit fonts.google.com and pick your fonts
+      2. Replace the font names in this URL
+      3. Update --font-heading and --font-body in css/style.css
+    Current: Poppins (headings) + Inter (body text)
+  ============================================================ -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@600;700;800&display=swap" rel="stylesheet" />
+
+  <!-- Main Stylesheet -->
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body>
+
+  <!-- ============================================================
+    SECTION: STICKY NAVIGATION BAR
+    Stays fixed at the top as you scroll.
+    Contains: Logo | Nav Links | Theme Toggle | CTA Button | Hamburger
+    CLIENT: Edit the logo text, nav link labels, and CTA button text.
+  ============================================================ -->
+  <header class="navbar" id="navbar" role="banner">
+    <div class="container navbar__inner">
+
+      <!-- LOGO — CLIENT: Replace text with your brand name, or swap for an <img> tag -->
+      <a href="#" class="navbar__logo" aria-label="DevMaster Pro Home">
+        <span class="navbar__logo-icon" aria-hidden="true">
+          <svg width="30" height="30" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect width="32" height="32" rx="8" fill="url(#nav-logo-grad)"/>
+            <path d="M8 13.5L16 9L24 13.5L16 18L8 13.5Z" stroke="white" stroke-width="2" stroke-linejoin="round"/>
+            <path d="M12 16V20C12 21.2 13.8 22.5 16 22.5C18.2 22.5 20 21.2 20 20V16" stroke="white" stroke-width="1.8" stroke-linecap="round"/>
+            <path d="M24 13.5V19" stroke="white" stroke-width="1.8" stroke-linecap="round"/>
+            <defs>
+              <linearGradient id="nav-logo-grad" x1="0" y1="0" x2="32" y2="32" gradientUnits="userSpaceOnUse">
+                <stop stop-color="#6C47FF"/>
+                <stop offset="1" stop-color="#8B5CF6"/>
+              </linearGradient>
+            </defs>
+          </svg>
+        </span>
+        <span>DevMaster<span class="text-primary">Pro</span></span>
+      </a>
+
+      <!-- DESKTOP NAV — CLIENT: Edit the href anchors and link labels -->
+      <nav class="navbar__nav" aria-label="Main navigation">
+        <ul class="navbar__nav-list" role="list">
+          <li><a href="#courses"      class="navbar__nav-link">Courses</a></li>
+          <li><a href="#syllabus"     class="navbar__nav-link">Syllabus</a></li>
+          <li><a href="#instructor"   class="navbar__nav-link">Instructor</a></li>
+          <li><a href="#testimonials" class="navbar__nav-link">Reviews</a></li>
+          <li><a href="#pricing"      class="navbar__nav-link">Pricing</a></li>
+        </ul>
+      </nav>
+
+      <!-- RIGHT ACTIONS: theme toggle + CTA + hamburger -->
+      <div class="navbar__actions">
+
+        <!-- DARK / LIGHT MODE TOGGLE -->
+        <button class="theme-toggle" id="themeToggle"
+                aria-label="Toggle dark mode" title="Toggle dark/light mode">
+          <!-- Sun icon (shown in dark mode to switch back to light) -->
+          <svg class="theme-toggle__icon theme-toggle__icon--sun"
+               xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+               fill="none" stroke="currentColor" stroke-width="2"
+               stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <circle cx="12" cy="12" r="5"/>
+            <line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/>
+            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/>
+            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/>
+            <line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/>
+            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/>
+            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>
+          </svg>
+          <!-- Moon icon (shown in light mode to switch to dark) -->
+          <svg class="theme-toggle__icon theme-toggle__icon--moon"
+               xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+               fill="none" stroke="currentColor" stroke-width="2"
+               stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+          </svg>
+        </button>
+
+        <!-- DESKTOP CTA — CLIENT: Change text and href to your enrollment URL -->
+        <a href="#pricing" class="btn btn--primary navbar__cta">Enroll Now</a>
+
+        <!-- HAMBURGER (mobile only) -->
+        <button class="navbar__hamburger" id="hamburger"
+                aria-label="Open navigation menu"
+                aria-expanded="false"
+                aria-controls="mobileMenu">
+          <span class="hamburger__bar"></span>
+          <span class="hamburger__bar"></span>
+          <span class="hamburger__bar"></span>
+        </button>
+      </div>
+    </div>
+
+    <!-- MOBILE MENU DRAWER -->
+    <div class="mobile-menu" id="mobileMenu" aria-hidden="true">
+      <nav aria-label="Mobile navigation">
+        <ul class="mobile-menu__list" role="list">
+          <!-- CLIENT: Keep these in sync with the desktop nav links above -->
+          <li><a href="#courses"      class="mobile-menu__link">Courses</a></li>
+          <li><a href="#syllabus"     class="mobile-menu__link">Syllabus</a></li>
+          <li><a href="#instructor"   class="mobile-menu__link">Instructor</a></li>
+          <li><a href="#testimonials" class="mobile-menu__link">Reviews</a></li>
+          <li><a href="#pricing"      class="mobile-menu__link">Pricing</a></li>
+          <li><a href="#pricing"      class="btn btn--primary mobile-menu__cta">Enroll Now</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+
+  <main>
+
+    <!-- ============================================================
+      SECTION: HERO
+      The first thing visitors see. Designed to convert.
+      CLIENT: Change the headline, subheading, badge text,
+              stat numbers, and CTA button text/links.
+    ============================================================ -->
+    <section class="hero" id="hero" aria-labelledby="hero-heading">
+
+      <!-- Decorative blurred color orbs (CSS-only, no images) -->
+      <div class="hero__orb hero__orb--1" aria-hidden="true"></div>
+      <div class="hero__orb hero__orb--2" aria-hidden="true"></div>
+      <div class="hero__orb hero__orb--3" aria-hidden="true"></div>
+
+      <div class="container hero__inner">
+
+        <!-- LEFT: TEXT CONTENT -->
+        <div class="hero__content">
+
+          <!-- Live enrollment badge — CLIENT: Change badge text -->
+          <div class="hero__badge" data-aos="fade-down" data-aos-delay="100">
+            <span class="hero__badge-dot" aria-hidden="true"></span>
+             Now Enrolling — Cohort 7 Starts Oct 1st
+          </div>
+
+          <!-- Main headline — CLIENT: Change this to your course's main promise -->
+          <h1 class="hero__heading" id="hero-heading"
+              data-aos="fade-up" data-aos-delay="150">
+            Build Real Products.<br />
+            Land Your Dream<br />
+            <span class="text-gradient">Dev Job.</span>
+          </h1>
+
+          <!-- Subheading — CLIENT: Describe your course in 1–2 sentences -->
+          <p class="hero__subheading" data-aos="fade-up" data-aos-delay="250">
+            A project-based, mentor-led Full-Stack Web Development Bootcamp.
+            Go from zero to job-ready in 16 weeks — with lifetime access and
+            a 30-day money-back guarantee.
+          </p>
+
+          <!-- CTA Buttons — CLIENT: Change text and href to your enrollment/info page -->
+          <div class="hero__cta-group" data-aos="fade-up" data-aos-delay="350">
+            <a href="#pricing" class="btn btn--primary btn--large">
+              Start Learning Today
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"
+                   width="18" height="18" aria-hidden="true">
+                <path fill-rule="evenodd" d="M3 10a.75.75 0 01.75-.75h10.638L10.23 5.29a.75.75 0 111.04-1.08l5.5 5.25a.75.75 0 010 1.08l-5.5 5.25a.75.75 0 11-1.04-1.08l4.158-3.96H3.75A.75.75 0 013 10z" clip-rule="evenodd"/>
+              </svg>
+            </a>
+            <a href="#courses" class="btn btn--ghost btn--large">
+              View Curriculum
+            </a>
+          </div>
+
+          <!-- Stats Row — CLIENT: Update numbers and labels -->
+          <div class="hero__stats" data-aos="fade-up" data-aos-delay="450">
+            <div class="hero__stat">
+              <span class="hero__stat-number">12K+</span>
+              <span class="hero__stat-label">Students Enrolled</span>
+            </div>
+            <div class="hero__stat-divider" aria-hidden="true"></div>
+            <div class="hero__stat">
+              <span class="hero__stat-number">96%</span>
+              <span class="hero__stat-label">Completion Rate</span>
+            </div>
+            <div class="hero__stat-divider" aria-hidden="true"></div>
+            <div class="hero__stat">
+              <span class="hero__stat-number">
+                4.9
+                <svg class="hero__stat-star" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="#F59E0B" stroke="#F59E0B" stroke-width="1.5" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              </span>
+              <span class="hero__stat-label">Average Rating</span>
+            </div>
+          </div>
+        </div><!-- end .hero__content -->
+
+        <!-- RIGHT: VISUAL CARD
+             CLIENT: Replace the <img> src with your own course preview screenshot.
+             Recommended size: 600×380px
+        -->
+        <div class="hero__visual" data-aos="fade-left" data-aos-delay="250">
+          <div class="hero__card">
+            <!-- Fake browser chrome header for a premium look -->
+            <div class="hero__card-header">
+              <div class="hero__card-dots" aria-hidden="true">
+                <span></span><span></span><span></span>
+              </div>
+              <span class="hero__card-title">devmaster.pro/dashboard</span>
+            </div>
+            <!-- CLIENT: Replace this with your course preview image or video thumbnail -->
+            <img
+              src="https://images.unsplash.com/photo-1516116216624-53e697fedbea?w=600&q=80"
+              alt="Screenshot of the DevMaster Pro course dashboard"
+              class="hero__card-image"
+              loading="eager"
+              width="600"
+              height="340"
+            />
+            <!-- Overlay badge on the image -->
+            <div class="hero__card-badge">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="20" height="15" x="2" y="3" rx="3"/><polygon points="10 7.5 15 10.5 10 13.5 10 7.5" fill="currentColor" fill-opacity="0.3"/><path d="M8 21h8"/><path d="M12 18v3"/></svg>
+              <span>260+ HD Video Lessons</span>
+            </div>
+          </div>
+
+          <!-- Floating achievement cards — decorative, client can edit text -->
+          <div class="hero__float-card hero__float-card--1" aria-hidden="true">
+            <span class="hero__float-icon hero__float-icon--gold">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="6"/><path d="M15.477 12.89 17 22l-5-3-5 3 1.523-9.11"/></svg>
+            </span>
+            <div>
+              <span class="hero__float-label">Certificate</span>
+              <span class="hero__float-value">Industry Recognized</span>
+            </div>
+          </div>
+          <div class="hero__float-card hero__float-card--2" aria-hidden="true">
+            <span class="hero__float-icon hero__float-icon--primary">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor" stroke="none"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+            </span>
+            <div>
+              <span class="hero__float-label">Now Watching</span>
+              <span class="hero__float-value">React Hooks Deep Dive</span>
+            </div>
+          </div>
+        </div><!-- end .hero__visual -->
+
+      </div>
+    </section>
+
+
+    <!-- ============================================================
+      SECTION: SOCIAL PROOF BAR
+      "Graduates work at" company logos strip.
+      CLIENT: Replace the text placeholders with real <img> logo tags.
+      Example: <img src="assets/images/logo-google.svg" alt="Google" class="proof-bar__logo-img" />
+    ============================================================ -->
+    <section class="proof-bar" aria-label="Companies where our graduates work">
+      <div class="container proof-bar__inner">
+        <p class="proof-bar__label">Our graduates work at</p>
+        <div class="proof-bar__logos" role="list">
+          <!-- CLIENT: Replace each <span> with a real company logo image -->
+          <span class="proof-bar__logo" role="listitem">Google</span>
+          <span class="proof-bar__logo" role="listitem">Meta</span>
+          <span class="proof-bar__logo" role="listitem">Shopify</span>
+          <span class="proof-bar__logo" role="listitem">Stripe</span>
+          <span class="proof-bar__logo" role="listitem">Airbnb</span>
+          <span class="proof-bar__logo" role="listitem">Netflix</span>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ============================================================
+      SECTION: COURSE SWITCHER / TABS
+      Lets visitors switch between different course tracks.
+      CLIENT: To add a new tab:
+        1. Add a <button class="tabs__btn"> in .tabs__nav
+        2. Add a matching <div class="tabs__panel"> in .tabs__panels
+        3. Make sure data-tab on button = id on panel
+    ============================================================ -->
+    <section class="courses section" id="courses" aria-labelledby="courses-heading">
+      <div class="container">
+
+        <div class="section-header" data-aos="fade-up">
+          <!-- CLIENT: Change section label and heading text -->
+          <span class="section-label">What You'll Learn</span>
+          <h2 class="section-heading" id="courses-heading">
+            Three Tracks. One Complete Journey.
+          </h2>
+          <p class="section-subheading">
+            Choose your path — all tracks include career support,
+            live mentorship, and a verified certificate.
+          </p>
+        </div>
+
+        <!-- TABS COMPONENT -->
+        <div class="tabs" data-aos="fade-up" data-aos-delay="100">
+
+          <!-- TAB NAV BUTTONS -->
+          <div class="tabs__nav" role="tablist" aria-label="Course tracks">
+            <!-- CLIENT: Edit button labels. data-tab MUST match the panel id below -->
+            <button class="tabs__btn tabs__btn--active" role="tab"
+                    data-tab="track-frontend" aria-selected="true"
+                    aria-controls="track-frontend" id="tab-frontend">
+              <span class="tabs__btn-icon" aria-hidden="true">
+                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="18" height="18" x="3" y="3" rx="2"/><path d="M3 9h18"/><path d="M9 21V9"/></svg>
+              </span>
+              Frontend Track
+            </button>
+            <button class="tabs__btn" role="tab"
+                    data-tab="track-backend" aria-selected="false"
+                    aria-controls="track-backend" id="tab-backend">
+              <span class="tabs__btn-icon" aria-hidden="true">
+                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="8" x="2" y="2" rx="2"/><rect width="20" height="8" x="2" y="14" rx="2"/><line x1="6" x2="6.01" y1="6" y2="6"/><line x1="6" x2="6.01" y1="18" y2="18"/></svg>
+              </span>
+              Backend Track
+            </button>
+            <button class="tabs__btn" role="tab"
+                    data-tab="track-fullstack" aria-selected="false"
+                    aria-controls="track-fullstack" id="tab-fullstack">
+              <span class="tabs__btn-icon" aria-hidden="true">
+                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 2 7 12 12 22 7 12 2"/><polyline points="2 17 12 22 22 17"/><polyline points="2 12 12 17 22 12"/></svg>
+              </span>
+              Full-Stack Track
+            </button>
+          </div>
+
+          <!-- TAB PANELS -->
+          <div class="tabs__panels">
+
+            <!-- PANEL 1: Frontend Track — CLIENT: Edit all content here -->
+            <div class="tabs__panel tabs__panel--active"
+                 id="track-frontend" role="tabpanel" aria-labelledby="tab-frontend">
+              <div class="track-card">
+                <div class="track-card__info">
+                  <h3 class="track-card__title">Frontend Development</h3>
+                  <p class="track-card__desc">
+                    Master the craft of building beautiful, interactive interfaces.
+                    From HTML/CSS fundamentals to advanced React and performance patterns.
+                  </p>
+                  <!-- CLIENT: Edit the list items below -->
+                  <ul class="track-card__list" role="list">
+                    <li><svg class="track-card__check" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>HTML5 &amp; Modern CSS (Grid, Flexbox, Animations)</li>
+                    <li><svg class="track-card__check" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>JavaScript ES2024 — Deep Dive</li>
+                    <li><svg class="track-card__check" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>React 19 + Next.js 15</li>
+                    <li><svg class="track-card__check" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>TypeScript for React</li>
+                    <li><svg class="track-card__check" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>State Management (Zustand, React Query)</li>
+                    <li><svg class="track-card__check" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>Testing with Vitest &amp; Playwright</li>
+                    <li><svg class="track-card__check" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>Web Vitals &amp; Performance Optimization</li>
+                    <li><svg class="track-card__check" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>5 Portfolio-Ready Projects</li>
+                  </ul>
+                  <div class="track-card__meta">
+                    <span class="track-card__badge">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                      80 Hours
+                    </span>
+                    <span class="track-card__badge">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polygon points="6 3 20 12 6 21 6 3"/></svg>
+                      120 Lessons
+                    </span>
+                    <span class="track-card__badge">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="18" x2="18" y1="20" y2="4"/><line x1="6" x2="6" y1="20" y2="16"/><line x1="12" x2="12" y1="20" y2="10"/></svg>
+                      Beginner → Advanced
+                    </span>
+                  </div>
+                  <!-- CLIENT: Change href to your enrollment or checkout URL -->
+                  <a href="#pricing" class="btn btn--primary">Enroll in This Track →</a>
+                </div>
+                <div class="track-card__visual">
+                  <!-- CLIENT: Replace with a relevant screenshot or mockup for this track -->
+                  <img
+                    src="https://images.unsplash.com/photo-1547658719-da2b51169166?w=520&q=80"
+                    alt="Frontend coding environment screenshot"
+                    class="track-card__image"
+                    loading="lazy" width="520" height="340"
+                  />
+                </div>
+              </div>
+            </div>
+
+            <!-- PANEL 2: Backend Track — CLIENT: Edit content -->
+            <div class="tabs__panel"
+                 id="track-backend" role="tabpanel" aria-labelledby="tab-backend">
+              <div class="track-card">
+                <div class="track-card__info">
+                  <h3 class="track-card__title">Backend Development</h3>
+                  <p class="track-card__desc">
+                    Build robust, scalable server-side applications. Learn Node.js,
+                    databases, APIs, authentication, and cloud deployment from
+                    industry engineers.
+                  </p>
+                  <ul class="track-card__list" role="list">
+                    <li><svg class="track-card__check" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>Node.js &amp; Express.js Mastery</li>
+                    <li><svg class="track-card__check" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>PostgreSQL + Prisma ORM</li>
+                    <li><svg class="track-card__check" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>MongoDB &amp; Mongoose</li>
+                    <li><svg class="track-card__check" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>REST API Design &amp; GraphQL</li>
+                    <li><svg class="track-card__check" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>Auth: JWT, OAuth2, Sessions</li>
+                    <li><svg class="track-card__check" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>Redis, Queues &amp; Caching</li>
+                    <li><svg class="track-card__check" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>Docker &amp; AWS Deployment</li>
+                    <li><svg class="track-card__check" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>4 Production-Grade API Projects</li>
+                  </ul>
+                  <div class="track-card__meta">
+                    <span class="track-card__badge">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                      90 Hours
+                    </span>
+                    <span class="track-card__badge">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polygon points="6 3 20 12 6 21 6 3"/></svg>
+                      140 Lessons
+                    </span>
+                    <span class="track-card__badge">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="18" x2="18" y1="20" y2="4"/><line x1="6" x2="6" y1="20" y2="16"/><line x1="12" x2="12" y1="20" y2="10"/></svg>
+                      Intermediate → Advanced
+                    </span>
+                  </div>
+                  <a href="#pricing" class="btn btn--primary">Enroll in This Track →</a>
+                </div>
+                <div class="track-card__visual">
+                  <!-- CLIENT: Replace image -->
+                  <img
+                    src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=520&q=80"
+                    alt="Server infrastructure and backend code"
+                    class="track-card__image"
+                    loading="lazy" width="520" height="340"
+                  />
+                </div>
+              </div>
+            </div>
+
+            <!-- PANEL 3: Full-Stack Track — CLIENT: Edit content -->
+            <div class="tabs__panel"
+                 id="track-fullstack" role="tabpanel" aria-labelledby="tab-fullstack">
+              <div class="track-card">
+                <div class="track-card__info">
+                  <h3 class="track-card__title">
+                    Full-Stack Track
+                    <span class="badge-popular">Most Popular</span>
+                  </h3>
+                  <p class="track-card__desc">
+                    The complete package — frontend + backend + DevOps.
+                    Build, ship, and scale complete web applications end-to-end.
+                    Everything in both tracks, plus system design and team workflows.
+                  </p>
+                  <ul class="track-card__list" role="list">
+                    <li><svg class="track-card__check" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>Everything in Frontend Track</li>
+                    <li><svg class="track-card__check" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>Everything in Backend Track</li>
+                    <li><svg class="track-card__check" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>System Design Fundamentals</li>
+                    <li><svg class="track-card__check" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>CI/CD Pipelines &amp; GitHub Actions</li>
+                    <li><svg class="track-card__check" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>Microservices Architecture</li>
+                    <li><svg class="track-card__check" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>Team Git Workflows &amp; Code Review</li>
+                    <li><svg class="track-card__check" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>Technical Interview Prep + Mock Interviews</li>
+                    <li><svg class="track-card__check" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>10 Full-Stack Capstone Projects</li>
+                  </ul>
+                  <div class="track-card__meta">
+                    <span class="track-card__badge">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                      180 Hours
+                    </span>
+                    <span class="track-card__badge">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polygon points="6 3 20 12 6 21 6 3"/></svg>
+                      260 Lessons
+                    </span>
+                    <span class="track-card__badge">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="18" x2="18" y1="20" y2="4"/><line x1="6" x2="6" y1="20" y2="16"/><line x1="12" x2="12" y1="20" y2="10"/></svg>
+                      All Levels
+                    </span>
+                  </div>
+                  <a href="#pricing" class="btn btn--primary">Enroll in This Track →</a>
+                </div>
+                <div class="track-card__visual">
+                  <!-- CLIENT: Replace image -->
+                  <img
+                    src="https://images.unsplash.com/photo-1593720213428-28a5b9e94613?w=520&q=80"
+                    alt="Full-stack development workflow diagram"
+                    class="track-card__image"
+                    loading="lazy" width="520" height="340"
+                  />
+                </div>
+              </div>
+            </div>
+
+          </div><!-- end .tabs__panels -->
+        </div><!-- end .tabs -->
+      </div>
+    </section>
+
+
+    <!-- ============================================================
+      SECTION: SYLLABUS / ACCORDION
+      Shows a collapsible week-by-week course breakdown.
+      CLIENT: Copy/paste an .accordion__item block to add more modules.
+              Edit module titles, meta text, and lesson list items.
+    ============================================================ -->
+    <section class="syllabus section section--alt" id="syllabus"
+             aria-labelledby="syllabus-heading">
+      <div class="container">
+
+        <div class="section-header" data-aos="fade-up">
+          <span class="section-label">Course Curriculum</span>
+          <h2 class="section-heading" id="syllabus-heading">
+            16 Weeks. Structured for Success.
+          </h2>
+          <p class="section-subheading">
+            Every week builds on the last — from fundamentals to
+            production-grade, job-ready development.
+          </p>
+        </div>
+
+        <!-- ACCORDION — each item = one collapsible module -->
+        <div class="accordion" data-aos="fade-up" data-aos-delay="100" role="list">
+
+          <!-- MODULE 1 — CLIENT: Edit title, meta, and lesson list -->
+          <div class="accordion__item" role="listitem">
+            <button class="accordion__trigger"
+                    aria-expanded="true"
+                    aria-controls="module-1-body"
+                    id="module-1-trigger">
+              <div class="accordion__trigger-left">
+                <span class="accordion__module-num" aria-label="Module 1">01</span>
+                <div>
+                  <span class="accordion__module-title">Web Foundations &amp; Dev Environment</span>
+                  <span class="accordion__module-meta">6 lessons · 4.5 hrs · Beginner</span>
+                </div>
+              </div>
+              <span class="accordion__icon" aria-hidden="true">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                     viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                     stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                  <polyline points="6 9 12 15 18 9"/>
+                </svg>
+              </span>
+            </button>
+            <div class="accordion__body" id="module-1-body" aria-labelledby="module-1-trigger">
+              <ul class="accordion__lesson-list" role="list">
+                <li class="accordion__lesson">
+                  <span class="lesson-icon" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"/></svg></span>
+                  Setting Up VS Code Like a Pro
+                </li>
+                <li class="accordion__lesson">
+                  <span class="lesson-icon" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"/></svg></span>
+                  How the Web Works (DNS, HTTP, Browsers)
+                </li>
+                <li class="accordion__lesson">
+                  <span class="lesson-icon" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"/></svg></span>
+                  HTML5 Semantic Structure &amp; Accessibility
+                </li>
+                <li class="accordion__lesson">
+                  <span class="lesson-icon" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"/></svg></span>
+                  CSS Box Model, Cascade &amp; Specificity
+                </li>
+                <li class="accordion__lesson">
+                  <span class="lesson-icon" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"/></svg></span>
+                  Git Basics &amp; GitHub Workflow
+                </li>
+                <li class="accordion__lesson">
+                  <span class="lesson-icon lesson-icon--project" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg></span>
+                  Project: Build &amp; Deploy Your Personal Portfolio
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- MODULE 2 -->
+          <div class="accordion__item" role="listitem">
+            <button class="accordion__trigger"
+                    aria-expanded="false"
+                    aria-controls="module-2-body"
+                    id="module-2-trigger">
+              <div class="accordion__trigger-left">
+                <span class="accordion__module-num" aria-label="Module 2">02</span>
+                <div>
+                  <span class="accordion__module-title">Advanced CSS &amp; Responsive Design</span>
+                  <span class="accordion__module-meta">8 lessons · 6 hrs · Beginner–Intermediate</span>
+                </div>
+              </div>
+              <span class="accordion__icon" aria-hidden="true">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                     viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                     stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                  <polyline points="6 9 12 15 18 9"/>
+                </svg>
+              </span>
+            </button>
+            <div class="accordion__body" id="module-2-body" aria-labelledby="module-2-trigger">
+              <ul class="accordion__lesson-list" role="list">
+                <li class="accordion__lesson"><span class="lesson-icon" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"/></svg></span> CSS Grid Mastery</li>
+                <li class="accordion__lesson"><span class="lesson-icon" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"/></svg></span> Flexbox Deep Dive</li>
+                <li class="accordion__lesson"><span class="lesson-icon" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"/></svg></span> CSS Custom Properties &amp; Theming</li>
+                <li class="accordion__lesson"><span class="lesson-icon" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"/></svg></span> Mobile-First Responsive Design</li>
+                <li class="accordion__lesson"><span class="lesson-icon" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"/></svg></span> CSS Animations &amp; Transitions (60fps)</li>
+                <li class="accordion__lesson"><span class="lesson-icon" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"/></svg></span> Sass / SCSS Fundamentals</li>
+                <li class="accordion__lesson"><span class="lesson-icon" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"/></svg></span> Tailwind CSS Workflow</li>
+                <li class="accordion__lesson"><span class="lesson-icon lesson-icon--project" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg></span> Project: Clone a Premium Landing Page</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- MODULE 3 -->
+          <div class="accordion__item" role="listitem">
+            <button class="accordion__trigger"
+                    aria-expanded="false"
+                    aria-controls="module-3-body"
+                    id="module-3-trigger">
+              <div class="accordion__trigger-left">
+                <span class="accordion__module-num" aria-label="Module 3">03</span>
+                <div>
+                  <span class="accordion__module-title">JavaScript: Core to Advanced</span>
+                  <span class="accordion__module-meta">14 lessons · 12 hrs · Intermediate</span>
+                </div>
+              </div>
+              <span class="accordion__icon" aria-hidden="true">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                     viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                     stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                  <polyline points="6 9 12 15 18 9"/>
+                </svg>
+              </span>
+            </button>
+            <div class="accordion__body" id="module-3-body" aria-labelledby="module-3-trigger">
+              <ul class="accordion__lesson-list" role="list">
+                <li class="accordion__lesson"><span class="lesson-icon" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"/></svg></span> ES2024 Syntax &amp; Modern Concepts</li>
+                <li class="accordion__lesson"><span class="lesson-icon" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"/></svg></span> DOM Manipulation &amp; Event Delegation</li>
+                <li class="accordion__lesson"><span class="lesson-icon" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"/></svg></span> Async JS: Promises, Async/Await, Fetch API</li>
+                <li class="accordion__lesson"><span class="lesson-icon" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"/></svg></span> Closures, Prototypes &amp; "this" Keyword</li>
+                <li class="accordion__lesson"><span class="lesson-icon" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"/></svg></span> JavaScript Design Patterns</li>
+                <li class="accordion__lesson"><span class="lesson-icon" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"/></svg></span> Error Handling &amp; Debugging Strategies</li>
+                <li class="accordion__lesson"><span class="lesson-icon lesson-icon--project" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg></span> Project: Build a Weather + Movie App</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- MODULE 4 -->
+          <div class="accordion__item" role="listitem">
+            <button class="accordion__trigger"
+                    aria-expanded="false"
+                    aria-controls="module-4-body"
+                    id="module-4-trigger">
+              <div class="accordion__trigger-left">
+                <span class="accordion__module-num" aria-label="Module 4">04</span>
+                <div>
+                  <span class="accordion__module-title">React &amp; Modern Frontend Frameworks</span>
+                  <span class="accordion__module-meta">16 lessons · 14 hrs · Intermediate–Advanced</span>
+                </div>
+              </div>
+              <span class="accordion__icon" aria-hidden="true">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                     viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                     stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                  <polyline points="6 9 12 15 18 9"/>
+                </svg>
+              </span>
+            </button>
+            <div class="accordion__body" id="module-4-body" aria-labelledby="module-4-trigger">
+              <ul class="accordion__lesson-list" role="list">
+                <li class="accordion__lesson"><span class="lesson-icon" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"/></svg></span> React 19 Core Concepts &amp; Hooks</li>
+                <li class="accordion__lesson"><span class="lesson-icon" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"/></svg></span> Component Architecture &amp; Patterns</li>
+                <li class="accordion__lesson"><span class="lesson-icon" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"/></svg></span> Next.js 15: App Router &amp; Server Components</li>
+                <li class="accordion__lesson"><span class="lesson-icon" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"/></svg></span> TypeScript for React Applications</li>
+                <li class="accordion__lesson"><span class="lesson-icon" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"/></svg></span> State Management with Zustand</li>
+                <li class="accordion__lesson"><span class="lesson-icon" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"/></svg></span> Data Fetching with React Query / TanStack</li>
+                <li class="accordion__lesson"><span class="lesson-icon lesson-icon--project" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg></span> Project: Full E-Commerce Frontend (Capstone)</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- MODULE 5 -->
+          <div class="accordion__item" role="listitem">
+            <button class="accordion__trigger"
+                    aria-expanded="false"
+                    aria-controls="module-5-body"
+                    id="module-5-trigger">
+              <div class="accordion__trigger-left">
+                <span class="accordion__module-num" aria-label="Module 5">05</span>
+                <div>
+                  <span class="accordion__module-title">Backend, APIs &amp; Databases</span>
+                  <span class="accordion__module-meta">18 lessons · 16 hrs · Advanced</span>
+                </div>
+              </div>
+              <span class="accordion__icon" aria-hidden="true">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                     viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                     stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                  <polyline points="6 9 12 15 18 9"/>
+                </svg>
+              </span>
+            </button>
+            <div class="accordion__body" id="module-5-body" aria-labelledby="module-5-trigger">
+              <ul class="accordion__lesson-list" role="list">
+                <li class="accordion__lesson"><span class="lesson-icon" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"/></svg></span> Node.js Architecture &amp; Event Loop</li>
+                <li class="accordion__lesson"><span class="lesson-icon" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"/></svg></span> Building REST APIs with Express.js</li>
+                <li class="accordion__lesson"><span class="lesson-icon" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"/></svg></span> PostgreSQL &amp; Prisma ORM</li>
+                <li class="accordion__lesson"><span class="lesson-icon" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"/></svg></span> Authentication: JWT &amp; OAuth2</li>
+                <li class="accordion__lesson"><span class="lesson-icon" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"/></svg></span> GraphQL API Design</li>
+                <li class="accordion__lesson"><span class="lesson-icon" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"/></svg></span> Docker &amp; AWS Deployment</li>
+                <li class="accordion__lesson"><span class="lesson-icon lesson-icon--project" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg></span> Project: Build a Production SaaS REST API</li>
+              </ul>
+            </div>
+          </div>
+
+        </div><!-- end .accordion -->
+      </div>
+    </section>
+
+
+    <!-- ============================================================
+      SECTION: FEATURES & BONUSES
+      6-card grid showing key differentiators + a bonus strip.
+      CLIENT: Edit icon (emoji), title, and description for each card.
+              Copy a .feature-card block to add more cards.
+    ============================================================ -->
+    <section class="features section" id="features" aria-labelledby="features-heading">
+      <div class="container">
+
+        <div class="section-header" data-aos="fade-up">
+          <span class="section-label">Why DevMaster Pro?</span>
+          <h2 class="section-heading" id="features-heading">
+            Everything You Need to Succeed.
+          </h2>
+          <p class="section-subheading">
+            We don't just teach code — we build careers.
+          </p>
+        </div>
+
+        <div class="features__grid">
+
+          <!-- FEATURE CARD 1: HD Video Lessons -->
+          <div class="feature-card feature-card--video" data-aos="fade-up" data-aos-delay="0">
+            <div class="feature-card__icon-box" aria-hidden="true">
+              <svg class="feature-card__icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <rect width="20" height="15" x="2" y="3" rx="3"/>
+                <polygon points="10 7.5 15 10.5 10 13.5 10 7.5" fill="currentColor" fill-opacity="0.18"/>
+                <path d="M8 21h8"/>
+                <path d="M12 18v3"/>
+              </svg>
+            </div>
+            <h3 class="feature-card__title">HD Video Lessons</h3>
+            <p class="feature-card__desc">
+              260+ professionally recorded, high-definition lessons with captions.
+              Watch at your own pace, rewind anytime, forever.
+            </p>
+          </div>
+
+          <!-- FEATURE CARD 2: Live Mentorship -->
+          <div class="feature-card feature-card--mentorship" data-aos="fade-up" data-aos-delay="100">
+            <div class="feature-card__icon-box" aria-hidden="true">
+              <svg class="feature-card__icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/>
+                <circle cx="9" cy="7" r="4"/>
+                <path d="M22 21v-2a4 4 0 0 0-3-3.87"/>
+                <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+              </svg>
+            </div>
+            <h3 class="feature-card__title">Live Mentorship</h3>
+            <p class="feature-card__desc">
+              Weekly live Q&amp;A sessions with senior engineers. Get your exact
+              code reviewed and unblocked within hours — not days.
+            </p>
+          </div>
+
+          <!-- FEATURE CARD 3: Real Projects -->
+          <div class="feature-card feature-card--projects" data-aos="fade-up" data-aos-delay="200">
+            <div class="feature-card__icon-box" aria-hidden="true">
+              <svg class="feature-card__icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <rect width="20" height="16" x="2" y="4" rx="3"/>
+                <path d="m8 10 2.5 2-2.5 2"/>
+                <path d="M13.5 14H17"/>
+              </svg>
+            </div>
+            <h3 class="feature-card__title">Real Projects</h3>
+            <p class="feature-card__desc">
+              10 portfolio-quality projects built from scratch — the exact work
+              employers expect to see in technical interviews.
+            </p>
+          </div>
+
+          <!-- FEATURE CARD 4: Career Support -->
+          <div class="feature-card feature-card--career" data-aos="fade-up" data-aos-delay="0">
+            <div class="feature-card__icon-box" aria-hidden="true">
+              <svg class="feature-card__icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <rect width="20" height="14" x="2" y="7" rx="3"/>
+                <path d="M16 7V4a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v3"/>
+                <path d="M2 13h20"/>
+                <circle cx="12" cy="13" r="1.5" fill="currentColor"/>
+              </svg>
+            </div>
+            <h3 class="feature-card__title">Career Support</h3>
+            <p class="feature-card__desc">
+              Resume review, LinkedIn optimization, mock technical interviews,
+              and direct referrals to our network of hiring partners.
+            </p>
+          </div>
+
+          <!-- FEATURE CARD 5: Industry Certificate -->
+          <div class="feature-card feature-card--cert" data-aos="fade-up" data-aos-delay="100">
+            <div class="feature-card__icon-box" aria-hidden="true">
+              <svg class="feature-card__icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="8.5" r="5.5"/>
+                <path d="M15.4 13.5 17 22l-5-2.8L7 22l1.6-8.5"/>
+              </svg>
+            </div>
+            <h3 class="feature-card__title">Industry Certificate</h3>
+            <p class="feature-card__desc">
+              Earn a verifiable, blockchain-backed certificate recognized by
+              200+ tech companies. Share directly to your LinkedIn profile.
+            </p>
+          </div>
+
+          <!-- FEATURE CARD 6: Lifetime Access -->
+          <div class="feature-card feature-card--lifetime" data-aos="fade-up" data-aos-delay="200">
+            <div class="feature-card__icon-box" aria-hidden="true">
+              <svg class="feature-card__icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M12 12c-2-2.67-4-4-6-4a4 4 0 1 0 0 8c2 0 4-1.33 6-4Zm0 0c2 2.67 4 4 6 4a4 4 0 0 0 0-8c-2 0-4 1.33-6 4Z"/>
+              </svg>
+            </div>
+            <h3 class="feature-card__title">Lifetime Access</h3>
+            <p class="feature-card__desc">
+              Pay once, learn forever. All future curriculum updates and new
+              modules are included at no extra charge — ever.
+            </p>
+          </div>
+
+        </div><!-- end .features__grid -->
+
+        <!-- BONUS STRIP -->
+        <div class="bonus-strip" data-aos="fade-up" data-aos-delay="100">
+          <p class="bonus-strip__label">
+            <svg class="bonus-strip__icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <polyline points="20 12 20 22 4 22 4 12"/>
+              <rect width="20" height="5" x="2" y="7"/>
+              <line x1="12" x2="12" y1="22" y2="7"/>
+              <path d="M12 7H7.5a2.5 2.5 0 0 1 0-5C11 2 12 7 12 7z"/>
+              <path d="M12 7h4.5a2.5 2.5 0 0 0 0-5C13 2 12 7 12 7z"/>
+            </svg>
+            <span>Included Bonuses — No Extra Cost</span>
+          </p>
+          <div class="bonus-strip__items">
+            <span class="bonus-item">
+              <svg class="bonus-item__check" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+              Private Discord Community
+            </span>
+            <span class="bonus-item">
+              <svg class="bonus-item__check" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+              50+ Code Cheatsheets
+            </span>
+            <span class="bonus-item">
+              <svg class="bonus-item__check" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+              Interview Question Bank (500+)
+            </span>
+            <span class="bonus-item">
+              <svg class="bonus-item__check" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+              Design System Starter Kit
+            </span>
+            <span class="bonus-item">
+              <svg class="bonus-item__check" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+              1-on-1 Kickoff Call
+            </span>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- ============================================================
+      SECTION: INSTRUCTOR
+      CLIENT: Replace the photo, name, title, bio paragraphs,
+              credentials, and social media URLs.
+    ============================================================ -->
+    <section class="instructor section section--alt" id="instructor"
+             aria-labelledby="instructor-heading">
+      <div class="container">
+
+        <div class="section-header" data-aos="fade-up">
+          <span class="section-label">Your Instructor</span>
+          <h2 class="section-heading" id="instructor-heading">
+            Learn From Someone Who's Done It.
+          </h2>
+        </div>
+
+        <div class="instructor__card" data-aos="fade-up" data-aos-delay="100">
+
+          <!-- PHOTO — CLIENT: Replace the src with your instructor's photo.
+               Recommended: 300×300px square image. It will be cropped to a circle. -->
+          <div class="instructor__photo-wrapper">
+            <img
+              src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&q=80"
+              alt="Alex Morgan — Lead Instructor at DevMaster Pro"
+              class="instructor__photo"
+              loading="lazy" width="300" height="300"
+            />
+            <div class="instructor__photo-badge" aria-hidden="true">
+              <span class="instructor__stat-rating">
+                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="#F59E0B" stroke="#F59E0B" stroke-width="1.5"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                4.9
+              </span>
+              <span>Rating</span>
+            </div>
+          </div>
+
+          <!-- INFO -->
+          <div class="instructor__info">
+            <!-- CLIENT: Change name and job title/credentials -->
+            <h3 class="instructor__name">Alex Morgan</h3>
+            <p class="instructor__title">Senior Software Engineer · Ex-Google · Educator</p>
+
+            <!-- SOCIAL LINKS — CLIENT: Replace # with real profile URLs -->
+            <div class="instructor__socials">
+              <a href="#" class="instructor__social-link" aria-label="Twitter/X profile">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.746l7.73-8.835L1.254 2.25H8.08l4.259 5.629L18.244 2.25zm-1.161 17.52h1.833L7.084 4.126H5.117L17.083 19.77z"/></svg>
+              </a>
+              <a href="#" class="instructor__social-link" aria-label="LinkedIn profile">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7H10v-7a6 6 0 0 1 6-6zM2 9h4v12H2z"/><circle cx="4" cy="4" r="2"/></svg>
+              </a>
+              <a href="#" class="instructor__social-link" aria-label="YouTube channel">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+              </a>
+              <a href="#" class="instructor__social-link" aria-label="GitHub profile">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0 1 12 6.844a9.59 9.59 0 0 1 2.504.337c1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0 0 22 12.017C22 6.484 17.522 2 12 2z"/></svg>
+              </a>
+            </div>
+
+            <!-- BIO — CLIENT: Replace with your own biography paragraphs -->
+            <p class="instructor__bio">
+              With over 10 years of experience shipping production software at Google, Stripe,
+              and three successful startups, I've seen exactly what separates great developers
+              from average ones — and that's precisely what I teach. Not just syntax, but how
+              to <em>think</em> like a senior engineer.
+            </p>
+            <p class="instructor__bio">
+              I've mentored 500+ developers, with graduates landing roles at FAANG companies,
+              fast-growing startups, and building successful freelance careers. My philosophy:
+              build real things, get real feedback, land real jobs.
+            </p>
+
+            <!-- CREDENTIALS — CLIENT: Edit each credential item -->
+            <div class="instructor__credentials">
+              <div class="credential">
+                <span class="credential__icon" aria-hidden="true">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="14" x="2" y="7" rx="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>
+                </span>
+                <span>10+ years at Google, Stripe &amp; Meta</span>
+              </div>
+              <div class="credential">
+                <span class="credential__icon" aria-hidden="true">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>
+                </span>
+                <span>M.Sc. Computer Science, MIT</span>
+              </div>
+              <div class="credential">
+                <span class="credential__icon" aria-hidden="true">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+                </span>
+                <span>500+ developers mentored to employment</span>
+              </div>
+              <div class="credential">
+                <span class="credential__icon" aria-hidden="true">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
+                </span>
+                <span>Author of "JavaScript Architecture Patterns"</span>
+              </div>
+            </div>
+          </div><!-- end .instructor__info -->
+
+        </div><!-- end .instructor__card -->
+      </div>
+    </section>
+
+
+    <!-- ============================================================
+      SECTION: TESTIMONIALS
+      6-card grid of student reviews.
+      CLIENT: Replace avatar images, star count, quote, name, and role.
+              Copy a .testimonial-card block to add more reviews.
+    ============================================================ -->
+    <section class="testimonials section" id="testimonials"
+             aria-labelledby="testimonials-heading">
+      <div class="container">
+
+        <div class="section-header" data-aos="fade-up">
+          <span class="section-label">Student Stories</span>
+          <h2 class="section-heading" id="testimonials-heading">
+            Real Results. Real People.
+          </h2>
+          <p class="section-subheading">
+            From complete beginners to career-changers — our students get hired.
+          </p>
+        </div>
+
+        <div class="testimonials__grid">
+
+          <!-- TESTIMONIAL 1 — CLIENT: Edit stars, quote, name, role, avatar -->
+          <div class="testimonial-card" data-aos="fade-up" data-aos-delay="0">
+            <div class="testimonial-card__stars" aria-label="5 out of 5 stars">
+              <svg class="star-icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="#F59E0B" stroke="#F59E0B" stroke-width="1.5" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              <svg class="star-icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="#F59E0B" stroke="#F59E0B" stroke-width="1.5" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              <svg class="star-icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="#F59E0B" stroke="#F59E0B" stroke-width="1.5" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              <svg class="star-icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="#F59E0B" stroke="#F59E0B" stroke-width="1.5" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              <svg class="star-icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="#F59E0B" stroke="#F59E0B" stroke-width="1.5" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            </div>
+            <blockquote class="testimonial-card__quote">
+              "I went from zero coding knowledge to landing a $115k frontend role in 6 months.
+              The projects were exactly what my interviewers asked about. Worth every penny."
+            </blockquote>
+            <div class="testimonial-card__author">
+              <!-- CLIENT: Replace src with student photo, or use initials placeholder -->
+              <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=96&q=80"
+                   alt="Sarah K." class="testimonial-card__avatar"
+                   loading="lazy" width="48" height="48" />
+              <div>
+                <p class="testimonial-card__name">Sarah K.</p>
+                <p class="testimonial-card__role">Frontend Engineer @ Shopify</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- TESTIMONIAL 2 — Featured (highlighted) -->
+          <div class="testimonial-card testimonial-card--featured"
+               data-aos="fade-up" data-aos-delay="100">
+            <div class="testimonial-card__stars" aria-label="5 out of 5 stars">
+              <svg class="star-icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="#F59E0B" stroke="#F59E0B" stroke-width="1.5" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              <svg class="star-icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="#F59E0B" stroke="#F59E0B" stroke-width="1.5" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              <svg class="star-icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="#F59E0B" stroke="#F59E0B" stroke-width="1.5" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              <svg class="star-icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="#F59E0B" stroke="#F59E0B" stroke-width="1.5" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              <svg class="star-icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="#F59E0B" stroke="#F59E0B" stroke-width="1.5" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            </div>
+            <blockquote class="testimonial-card__quote">
+              "The live mentorship sessions alone are worth the entire price. I was stuck on
+              a bug for 3 days — Alex fixed it in 10 minutes and explained the root cause so
+              clearly I've never made that mistake again."
+            </blockquote>
+            <div class="testimonial-card__author">
+              <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=96&q=80"
+                   alt="Marcus T." class="testimonial-card__avatar"
+                   loading="lazy" width="48" height="48" />
+              <div>
+                <p class="testimonial-card__name">Marcus T.</p>
+                <p class="testimonial-card__role">Full-Stack Dev @ Stripe (via Referral)</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- TESTIMONIAL 3 -->
+          <div class="testimonial-card" data-aos="fade-up" data-aos-delay="200">
+            <div class="testimonial-card__stars" aria-label="5 out of 5 stars">
+              <svg class="star-icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="#F59E0B" stroke="#F59E0B" stroke-width="1.5" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              <svg class="star-icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="#F59E0B" stroke="#F59E0B" stroke-width="1.5" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              <svg class="star-icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="#F59E0B" stroke="#F59E0B" stroke-width="1.5" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              <svg class="star-icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="#F59E0B" stroke="#F59E0B" stroke-width="1.5" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              <svg class="star-icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="#F59E0B" stroke="#F59E0B" stroke-width="1.5" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            </div>
+            <blockquote class="testimonial-card__quote">
+              "I tried 4 other courses. This is the only one that pushed me to actually build
+              things, not just follow along. My portfolio went from zero to 10 real projects."
+            </blockquote>
+            <div class="testimonial-card__author">
+              <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=96&q=80"
+                   alt="Priya M." class="testimonial-card__avatar"
+                   loading="lazy" width="48" height="48" />
+              <div>
+                <p class="testimonial-card__name">Priya M.</p>
+                <p class="testimonial-card__role">Software Engineer @ Airbnb</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- TESTIMONIAL 4 -->
+          <div class="testimonial-card" data-aos="fade-up" data-aos-delay="0">
+            <div class="testimonial-card__stars" aria-label="5 out of 5 stars">
+              <svg class="star-icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="#F59E0B" stroke="#F59E0B" stroke-width="1.5" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              <svg class="star-icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="#F59E0B" stroke="#F59E0B" stroke-width="1.5" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              <svg class="star-icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="#F59E0B" stroke="#F59E0B" stroke-width="1.5" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              <svg class="star-icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="#F59E0B" stroke="#F59E0B" stroke-width="1.5" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              <svg class="star-icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="#F59E0B" stroke="#F59E0B" stroke-width="1.5" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            </div>
+            <blockquote class="testimonial-card__quote">
+              "As a 34-year-old career changer, I was terrified. The community made me feel
+              like I belonged from day one. I got my first dev job 4 months after finishing."
+            </blockquote>
+            <div class="testimonial-card__author">
+              <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=96&q=80"
+                   alt="James O." class="testimonial-card__avatar"
+                   loading="lazy" width="48" height="48" />
+              <div>
+                <p class="testimonial-card__name">James O.</p>
+                <p class="testimonial-card__role">Backend Dev @ Fintech Startup</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- TESTIMONIAL 5 -->
+          <div class="testimonial-card" data-aos="fade-up" data-aos-delay="100">
+            <div class="testimonial-card__stars" aria-label="5 out of 5 stars">
+              <svg class="star-icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="#F59E0B" stroke="#F59E0B" stroke-width="1.5" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              <svg class="star-icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="#F59E0B" stroke="#F59E0B" stroke-width="1.5" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              <svg class="star-icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="#F59E0B" stroke="#F59E0B" stroke-width="1.5" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              <svg class="star-icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="#F59E0B" stroke="#F59E0B" stroke-width="1.5" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              <svg class="star-icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="#F59E0B" stroke="#F59E0B" stroke-width="1.5" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            </div>
+            <blockquote class="testimonial-card__quote">
+              "The React + Next.js curriculum is the best I've found anywhere — and I've
+              taken Udemy, Frontend Masters, and Egghead. This is what 10x better looks like."
+            </blockquote>
+            <div class="testimonial-card__author">
+              <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=96&q=80"
+                   alt="Lena S." class="testimonial-card__avatar"
+                   loading="lazy" width="48" height="48" />
+              <div>
+                <p class="testimonial-card__name">Lena S.</p>
+                <p class="testimonial-card__role">Senior React Dev @ Remote Agency</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- TESTIMONIAL 6 -->
+          <div class="testimonial-card" data-aos="fade-up" data-aos-delay="200">
+            <div class="testimonial-card__stars" aria-label="5 out of 5 stars">
+              <svg class="star-icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="#F59E0B" stroke="#F59E0B" stroke-width="1.5" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              <svg class="star-icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="#F59E0B" stroke="#F59E0B" stroke-width="1.5" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              <svg class="star-icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="#F59E0B" stroke="#F59E0B" stroke-width="1.5" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              <svg class="star-icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="#F59E0B" stroke="#F59E0B" stroke-width="1.5" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              <svg class="star-icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="#F59E0B" stroke="#F59E0B" stroke-width="1.5" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            </div>
+            <blockquote class="testimonial-card__quote">
+              "Got a 40% salary increase within 3 months of completing the backend track.
+              The Docker + AWS module alone saved me months of painful trial and error."
+            </blockquote>
+            <div class="testimonial-card__author">
+              <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=96&q=80"
+                   alt="David R." class="testimonial-card__avatar"
+                   loading="lazy" width="48" height="48" />
+              <div>
+                <p class="testimonial-card__name">David R.</p>
+                <p class="testimonial-card__role">Lead Engineer @ SaaS Company</p>
+              </div>
+            </div>
+          </div>
+
+        </div><!-- end .testimonials__grid -->
+      </div>
+    </section>
+
+
+    <!-- ============================================================
+      SECTION: PRICING
+      3-tier pricing cards with monthly/annual billing toggle.
+      CLIENT: To change prices, edit the data-monthly and data-annual
+              attributes on .pricing-card__amount elements.
+              To change which card is "featured", move class
+              "pricing-card--featured" to a different card.
+              Change all href="#" to your checkout URL.
+    ============================================================ -->
+    <section class="pricing section section--alt" id="pricing"
+             aria-labelledby="pricing-heading">
+      <div class="container">
+
+        <div class="section-header" data-aos="fade-up">
+          <span class="section-label">Pricing</span>
+          <h2 class="section-heading" id="pricing-heading">
+            Invest in Your Future.
+          </h2>
+          <p class="section-subheading">
+            30-day money-back guarantee. Cancel anytime. No contracts.
+          </p>
+        </div>
+
+        <!-- BILLING TOGGLE: Monthly / Annual -->
+        <div class="billing-toggle" data-aos="fade-up" data-aos-delay="50"
+             aria-label="Billing period selector">
+          <span class="billing-toggle__label billing-toggle__label--active"
+                id="label-monthly">Monthly</span>
+          <button class="billing-toggle__btn" id="billingToggle"
+                  aria-label="Toggle billing period"
+                  role="switch" aria-checked="false">
+            <span class="billing-toggle__knob"></span>
+          </button>
+          <span class="billing-toggle__label" id="label-annual">
+            Annual
+            <span class="billing-toggle__save">Save 40%</span>
+          </span>
+        </div>
+
+        <div class="pricing__grid">
+
+          <!-- PLAN 1: Starter -->
+          <div class="pricing-card" data-aos="fade-up" data-aos-delay="0">
+            <div class="pricing-card__header">
+              <!-- CLIENT: Change plan name -->
+              <h3 class="pricing-card__name">Starter</h3>
+              <p class="pricing-card__desc">Perfect for self-starters who prefer to learn independently.</p>
+            </div>
+            <div class="pricing-card__price">
+              <!-- CLIENT: data-monthly = shown when toggle is OFF, data-annual = when ON -->
+              <span class="pricing-card__amount" data-monthly="$49" data-annual="$29">$49</span>
+              <span class="pricing-card__period">/month</span>
+            </div>
+            <!-- CLIENT: Edit feature items (yes = included, no = not included) -->
+            <ul class="pricing-card__features" role="list">
+              <li class="pricing-card__feature pricing-card__feature--yes">
+                <svg class="pricing-feature__icon pricing-feature__icon--check" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+                <span>Frontend Track Access</span>
+              </li>
+              <li class="pricing-card__feature pricing-card__feature--yes">
+                <svg class="pricing-feature__icon pricing-feature__icon--check" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+                <span>120 HD Video Lessons</span>
+              </li>
+              <li class="pricing-card__feature pricing-card__feature--yes">
+                <svg class="pricing-feature__icon pricing-feature__icon--check" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+                <span>Community Discord Access</span>
+              </li>
+              <li class="pricing-card__feature pricing-card__feature--yes">
+                <svg class="pricing-feature__icon pricing-feature__icon--check" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+                <span>Code Cheatsheets</span>
+              </li>
+              <li class="pricing-card__feature pricing-card__feature--no">
+                <svg class="pricing-feature__icon pricing-feature__icon--cross" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+                <span>Live Mentorship Sessions</span>
+              </li>
+              <li class="pricing-card__feature pricing-card__feature--no">
+                <svg class="pricing-feature__icon pricing-feature__icon--cross" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+                <span>Career Support Services</span>
+              </li>
+              <li class="pricing-card__feature pricing-card__feature--no">
+                <svg class="pricing-feature__icon pricing-feature__icon--cross" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+                <span>Certificate of Completion</span>
+              </li>
+              <li class="pricing-card__feature pricing-card__feature--no">
+                <svg class="pricing-feature__icon pricing-feature__icon--cross" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+                <span>1-on-1 Kickoff Call</span>
+              </li>
+            </ul>
+            <!-- CLIENT: Replace # with your checkout/payment link -->
+            <a href="#" class="btn btn--outline pricing-card__cta">Get Started</a>
+          </div>
+
+          <!-- PLAN 2: Pro (FEATURED — highlighted) -->
+          <div class="pricing-card pricing-card--featured" data-aos="fade-up" data-aos-delay="100">
+            <div class="pricing-card__popular-badge" aria-label="Most popular plan">
+              <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="currentColor" stroke="none"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+              <span>Most Popular</span>
+            </div>
+            <div class="pricing-card__header">
+              <h3 class="pricing-card__name">Pro</h3>
+              <p class="pricing-card__desc">The complete bootcamp experience with mentorship and career support.</p>
+            </div>
+            <div class="pricing-card__price">
+              <span class="pricing-card__amount" data-monthly="$99" data-annual="$59">$99</span>
+              <span class="pricing-card__period">/month</span>
+            </div>
+            <ul class="pricing-card__features" role="list">
+              <li class="pricing-card__feature pricing-card__feature--yes">
+                <svg class="pricing-feature__icon pricing-feature__icon--check" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+                <span>All Three Tracks Access</span>
+              </li>
+              <li class="pricing-card__feature pricing-card__feature--yes">
+                <svg class="pricing-feature__icon pricing-feature__icon--check" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+                <span>260+ HD Video Lessons</span>
+              </li>
+              <li class="pricing-card__feature pricing-card__feature--yes">
+                <svg class="pricing-feature__icon pricing-feature__icon--check" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+                <span>Community Discord Access</span>
+              </li>
+              <li class="pricing-card__feature pricing-card__feature--yes">
+                <svg class="pricing-feature__icon pricing-feature__icon--check" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+                <span>All Code Cheatsheets</span>
+              </li>
+              <li class="pricing-card__feature pricing-card__feature--yes">
+                <svg class="pricing-feature__icon pricing-feature__icon--check" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+                <span>Weekly Live Mentorship</span>
+              </li>
+              <li class="pricing-card__feature pricing-card__feature--yes">
+                <svg class="pricing-feature__icon pricing-feature__icon--check" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+                <span>Career Support Services</span>
+              </li>
+              <li class="pricing-card__feature pricing-card__feature--yes">
+                <svg class="pricing-feature__icon pricing-feature__icon--check" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+                <span>Industry Certificate</span>
+              </li>
+              <li class="pricing-card__feature pricing-card__feature--no">
+                <svg class="pricing-feature__icon pricing-feature__icon--cross" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+                <span>1-on-1 Kickoff Call</span>
+              </li>
+            </ul>
+            <!-- CLIENT: Replace # with your checkout/payment link -->
+            <a href="#" class="btn btn--primary pricing-card__cta">Enroll Now</a>
+          </div>
+
+          <!-- PLAN 3: Elite -->
+          <div class="pricing-card" data-aos="fade-up" data-aos-delay="200">
+            <div class="pricing-card__header">
+              <h3 class="pricing-card__name">Elite</h3>
+              <p class="pricing-card__desc">White-glove service. Guaranteed job-ready or your money back.</p>
+            </div>
+            <div class="pricing-card__price">
+              <span class="pricing-card__amount" data-monthly="$199" data-annual="$119">$199</span>
+              <span class="pricing-card__period">/month</span>
+            </div>
+            <ul class="pricing-card__features" role="list">
+              <li class="pricing-card__feature pricing-card__feature--yes">
+                <svg class="pricing-feature__icon pricing-feature__icon--check" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+                <span>Everything in Pro</span>
+              </li>
+              <li class="pricing-card__feature pricing-card__feature--yes">
+                <svg class="pricing-feature__icon pricing-feature__icon--check" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+                <span>1-on-1 Kickoff Call</span>
+              </li>
+              <li class="pricing-card__feature pricing-card__feature--yes">
+                <svg class="pricing-feature__icon pricing-feature__icon--check" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+                <span>Monthly 1-on-1 Coaching</span>
+              </li>
+              <li class="pricing-card__feature pricing-card__feature--yes">
+                <svg class="pricing-feature__icon pricing-feature__icon--check" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+                <span>Personal Resume Review</span>
+              </li>
+              <li class="pricing-card__feature pricing-card__feature--yes">
+                <svg class="pricing-feature__icon pricing-feature__icon--check" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+                <span>Mock Technical Interviews</span>
+              </li>
+              <li class="pricing-card__feature pricing-card__feature--yes">
+                <svg class="pricing-feature__icon pricing-feature__icon--check" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+                <span>Direct Hiring Partner Referrals</span>
+              </li>
+              <li class="pricing-card__feature pricing-card__feature--yes">
+                <svg class="pricing-feature__icon pricing-feature__icon--check" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+                <span>Job Guarantee (6 months)</span>
+              </li>
+              <li class="pricing-card__feature pricing-card__feature--yes">
+                <svg class="pricing-feature__icon pricing-feature__icon--check" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+                <span>Priority Code Review</span>
+              </li>
+            </ul>
+            <!-- CLIENT: Replace # with your checkout/payment link -->
+            <a href="#" class="btn btn--outline pricing-card__cta">Go Elite</a>
+          </div>
+
+        </div><!-- end .pricing__grid -->
+
+        <!-- Guarantee statement — CLIENT: Edit this text -->
+        <div class="pricing__guarantee" data-aos="fade-up" data-aos-delay="100">
+          <div class="pricing__guarantee-icon" aria-hidden="true">
+            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"/><path d="m9 12 2 2 4-4"/></svg>
+          </div>
+          <div class="pricing__guarantee-content">
+            <strong>30-Day Money-Back Guarantee.</strong>
+            <span>If you're not completely satisfied within the first 30 days, we'll refund 100% of your payment — no questions, no hassle.</span>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+
+  <!-- ============================================================
+    SECTION: FOOTER
+    CLIENT: Update brand name, tagline, social media links,
+            quick links, and copyright year.
+  ============================================================ -->
+  <footer class="footer" id="footer" role="contentinfo">
+    <div class="container footer__inner">
+
+      <!-- BRAND COLUMN -->
+      <div class="footer__brand">
+        <a href="#" class="navbar__logo footer__logo" aria-label="DevMaster Pro">
+          <span class="navbar__logo-icon" aria-hidden="true">
+            <svg width="28" height="28" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <rect width="32" height="32" rx="8" fill="url(#footer-logo-grad)"/>
+              <path d="M8 13.5L16 9L24 13.5L16 18L8 13.5Z" stroke="white" stroke-width="2" stroke-linejoin="round"/>
+              <path d="M12 16V20C12 21.2 13.8 22.5 16 22.5C18.2 22.5 20 21.2 20 20V16" stroke="white" stroke-width="1.8" stroke-linecap="round"/>
+              <path d="M24 13.5V19" stroke="white" stroke-width="1.8" stroke-linecap="round"/>
+              <defs>
+                <linearGradient id="footer-logo-grad" x1="0" y1="0" x2="32" y2="32" gradientUnits="userSpaceOnUse">
+                  <stop stop-color="#6C47FF"/>
+                  <stop offset="1" stop-color="#8B5CF6"/>
+                </linearGradient>
+              </defs>
+            </svg>
+          </span>
+          <span>DevMaster<span class="text-primary">Pro</span></span>
+        </a>
+        <!-- CLIENT: Change tagline -->
+        <p class="footer__tagline">
+          Building the next generation of world-class software engineers —
+          one project at a time.
+        </p>
+        <!-- SOCIAL ICONS — CLIENT: Replace # with your real profile URLs -->
+        <div class="footer__socials">
+          <a href="#" class="footer__social" aria-label="Twitter/X">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.746l7.73-8.835L1.254 2.25H8.08l4.259 5.629L18.244 2.25zm-1.161 17.52h1.833L7.084 4.126H5.117L17.083 19.77z"/></svg>
+          </a>
+          <a href="#" class="footer__social" aria-label="YouTube">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+          </a>
+          <a href="#" class="footer__social" aria-label="LinkedIn">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7H10v-7a6 6 0 0 1 6-6zM2 9h4v12H2z"/><circle cx="4" cy="4" r="2"/></svg>
+          </a>
+          <a href="#" class="footer__social" aria-label="GitHub">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0 1 12 6.844a9.59 9.59 0 0 1 2.504.337c1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0 0 22 12.017C22 6.484 17.522 2 12 2z"/></svg>
+          </a>
+        </div>
+      </div>
+
+      <!-- LINK COLUMNS -->
+      <div class="footer__links">
+        <div class="footer__link-group">
+          <h4 class="footer__link-heading">Course</h4>
+          <ul role="list">
+            <li><a href="#courses"      class="footer__link">Curriculum</a></li>
+            <li><a href="#syllabus"     class="footer__link">Syllabus</a></li>
+            <li><a href="#instructor"   class="footer__link">Instructor</a></li>
+            <li><a href="#pricing"      class="footer__link">Pricing</a></li>
+          </ul>
+        </div>
+        <div class="footer__link-group">
+          <h4 class="footer__link-heading">Company</h4>
+          <ul role="list">
+            <!-- CLIENT: Add real page URLs -->
+            <li><a href="#" class="footer__link">About Us</a></li>
+            <li><a href="#" class="footer__link">Blog</a></li>
+            <li><a href="#" class="footer__link">Careers</a></li>
+            <li><a href="#" class="footer__link">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer__link-group">
+          <h4 class="footer__link-heading">Legal</h4>
+          <ul role="list">
+            <li><a href="#" class="footer__link">Privacy Policy</a></li>
+            <li><a href="#" class="footer__link">Terms of Service</a></li>
+            <li><a href="#" class="footer__link">Cookie Policy</a></li>
+            <li><a href="#" class="footer__link">Refund Policy</a></li>
+          </ul>
+        </div>
+      </div>
+
+    </div><!-- end .footer__inner -->
+
+    <!-- Bottom bar -->
+    <div class="footer__bottom">
+      <div class="container">
+        <!-- CLIENT: Update the year and your company/brand name -->
+        <p>© 2026 DevMaster Pro. All rights reserved. Built with <svg class="footer__heart" xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="#FF6B6B" stroke="none" aria-hidden="true"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/></svg> for developers.</p>
+      </div>
+    </div>
+  </footer>
+
+
+  <!-- ============================================================
+    STICKY BOTTOM CTA BAR
+    Slides up from the bottom when the hero section leaves the viewport.
+    CLIENT: To disable entirely, delete this entire <div class="sticky-cta"> block.
+            To change text: edit the <strong> and <span> inside .sticky-cta__text.
+            To change the link: edit href on .sticky-cta__btn.
+  ============================================================ -->
+  <div class="sticky-cta" id="stickyCta" aria-hidden="true"
+       role="complementary" aria-label="Quick enrollment prompt">
+    <div class="container sticky-cta__inner">
+      <div class="sticky-cta__text">
+        <!-- CLIENT: Change text below -->
+        <strong>DevMaster Pro Bootcamp</strong>
+        <span>Cohort 7 starts October 1st — Only 14 spots left!</span>
+      </div>
+      <!-- CLIENT: Change href to your enrollment link -->
+      <a href="#pricing" class="btn btn--primary sticky-cta__btn">Enroll Now</a>
+    </div>
+  </div>
+
+
+  <!-- AOS JavaScript — Required for scroll animations (CDN) -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+
+  <!-- Main Script -->
+  <script src="js/script.js"></script>
+
+</body>
+</html>
